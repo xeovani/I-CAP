@@ -1,0 +1,462 @@
+body{
+	background: url("../imagenes/fondo_gratis3.jpg") center center fixed;	
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Lato', sans-serif;
+    color: #ffffff;
+
+}
+header{	
+	width: 100%;	
+	filter:alpha(opacity=50); opacity:0.8;
+
+}
+h1{
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+    color:#FFFFFF;
+    letter-spacing: 2px;
+}
+
+
+.cabecera{
+
+	max-width: auto;
+	height: 120px;
+	background-color: #F58837;
+}
+
+#logo_icap{
+	max-width: 120px;
+	float: left;
+	margin: 20px 0 0 307px;
+
+}
+
+#logo_icap img{
+	max-width: 120px;
+}
+#logo_procesar{
+	float: right;
+	margin: 40px 325px 0 0px;
+}
+
+#logo_procesar img{
+	max-width: 150px;
+	height: 30px;
+}
+#linea_inf_header{
+	
+	width: 100%;
+	height: 10px;
+	background-color: #1071B9;
+}
+#btn-enviar{
+	min-height: 43px;
+	min-width: 20%;
+
+}
+.cabecera img:hover{
+	-ms-tranform: rotate(360deg);	
+	-webkit-transform: rotate(360deg);
+	-webkit-transition:1.5s;
+}
+.input_login{
+	max-width: 20%;
+	min-height: 38px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: transparent;
+    
+	
+}
+
+.cuerpo{
+	position: relative;
+	top: 0px;
+	left:18.5%;
+	right: 20%;
+	max-width: 62%;
+	height: 900px;
+	background-color: #000000;
+	/*z-index: 1;*/
+	padding-top: 43px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login_user{
+	margin: 0px auto;
+	max-width: 75%;	
+	background-color: #9F9B9A;
+	padding:10px;	
+	filter:alpha(opacity=50); opacity:0.9;
+}
+.cont_img_tecl{
+	max-width: 77.2%;
+    height: 312px;
+    margin: 45px auto 0px;
+	/*position: relative;
+	top: 45px;
+	left: 12.5%;*/	
+	
+}
+.cont_img_tecl img{
+	width: 100%;
+    height: 100%;
+	background-color: black;	
+	
+}
+.img_usr{
+	background: url("../imagenes/Imagenes/img/User-43.png");
+	background-repeat: no-repeat;
+    
+    
+}
+.img_pws{
+	background: url("../imagenes/Imagenes/img/Lock-43.png");
+	background-repeat: no-repeat;
+    
+}
+.input_login {
+	padding-left: 15%;
+    
+}
+.text_cuerpo{
+    margin: 50px 12.5%;
+}
+
+ #btn-enviar{
+     /*border:1px solid #25729a;*/
+     border: 0;
+     background-color: #3093c7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+     background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+     background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+     background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+     background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+     background-image: linear-gradient(to bottom, #3093c7, #1c5a85);
+     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+    
+}
+
+ #btn-enviar:hover{
+     /*border:1px solid #25729a;*/
+     border: 0;
+     background-color: #0073c7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0073c7), to(#1c5a85));
+     background-image: -webkit-linear-gradient(top, #0073c7, #1c5a85);
+     background-image: -moz-linear-gradient(top, #0073c7, #1c5a85);
+     background-image: -ms-linear-gradient(top, #0073c7, #1c5a85);
+     background-image: -o-linear-gradient(top, #0073c7, #1c5a85);
+     background-image: linear-gradient(to bottom, #0073c7, #1c5a85);
+     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#0073c7, endColorstr=#1c5a85);
+    
+}
+
+
+
+
+
+
+
+/* Google Chrome y Safari */
+*::-webkit-input-placeholder {    
+    color: #000000;
+}
+/* Firefox anterior a 19 */
+*:-moz-placeholder {    
+    color: #000000;
+}
+/* Firefox 19 y superior */
+*::-moz-placeholder {    
+    color: #000000;
+}
+/* Internet Explorer 10 y superior */
+*:-ms-input-placeholder {    
+    color: #000000;
+}
+
+   .cuerpo h4{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .cuerpo p{
+        margin: 0px auto;
+        text-align: justify;
+        
+    }
+    
+
+/*Diseño reponsivo */
+
+			/*---------menor de 480px----------------*/
+
+@media (max-width: 480px) {
+    body{
+    background: url("../imagenes/fondo_mobil.jpg") center center fixed;
+    background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+    }
+	html{
+		font-size: 62.5%;
+	}
+	.cabecera{
+		max-height: 60px;
+	}
+    .cuerpo{
+        padding-top: 28px;
+        height: 100%;
+        max-width: 80%;
+        left: 10.5%;
+        
+    }
+
+	#logo_icap{
+		margin: 10px 0 0 30px;
+		width: 50px;
+
+	}
+	#logo_icap img{
+		max-width: 100%;
+        
+	}
+	#logo_procesar{
+		margin: 10px 50px 0 0;
+		max-width: 80px;
+	}
+	#logo_procesar img{
+		max-width: 100%;
+	} 
+    .input_login{
+        margin-top: 9px;
+	    display: block;
+        min-width: 80%;
+        font-size: 12px;
+        text-align: center; 
+        
+    }
+   
+    #btn-enviar{
+        margin-top: 9px;
+	    display: block;
+        min-width: 96%; 
+        font-size: 15px;
+        
+    }
+   .img_usr{
+        background: url("../imagenes/Imagenes/img/User-43.png");
+        background-repeat: no-repeat;
+    
+    }
+   .img_pws{
+        background: url("../imagenes/Imagenes/img/Lock-43.png");
+        background-repeat: no-repeat;
+    
+     }
+    .login_user input{
+        margin-left: 3px;
+    }
+    .cont_img_tecl{
+        min-width: 82.2%;
+        height: 203px;
+        margin: 28px auto 0px;
+        
+    }
+    .cuerpo h4{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .cuerpo p{
+        margin: 0px auto;
+        text-align: justify;
+        
+    }
+    
+    .text_cuerpo {
+    margin: 13px 9.5%;
+    text-align: center;
+    }
+ 
+    
+}
+			/*-----------------------entre 481 a 768------------------------*/
+
+@media (min-width: 481px) and (max-width: 767px){
+	.cabecera{
+		max-height: 80px;
+	}
+	#logo_icap{
+		margin: 20px 0 0 120px;
+		max-width: 50px;
+	}
+	#logo_icap img{
+		max-width: 100%;
+	}
+	#logo_procesar{
+		margin: 20px 70px 0 0; 
+		max-width: 90px;
+	}
+	#logo_procesar img{
+		max-width: 100%;
+	}
+    
+    .login_user > input{
+        margin-top: 9px;	    
+        min-width: 33.5%;
+        font-size: 12px;
+        text-align: center; 
+        
+    }
+    .cont_img_tecl{
+        min-width: 78.3%;
+        height: 203px;
+        margin: 28px auto 0px;
+        
+    }
+    #btn-enviar{
+        margin-top: 9px;
+	    display: block;
+        min-width: 99%; 
+        font-size: 1em;
+        
+    }
+    .cuerpo{
+        padding-top: 28px;
+        height: 100%;
+        max-width: 80%;
+        left: 10.5%;
+        
+    }
+    .cuerpo h4{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .cuerpo p{
+        margin: 0px auto;
+        text-align: justify;
+        
+    }
+   
+
+	
+}
+			/*--------------------entre 768 y 1024-----------------------*/
+
+@media (min-width: 768px) and (max-width:1024px){
+	.cabecera{
+		max-height: 90px;
+	}
+	#logo_icap{
+		margin: 25px 0 0 150px;
+		max-width: 60px;
+	}
+	#logo_icap img{
+		max-width: 100%;
+
+	}
+	#logo_procesar{
+		margin: 25px 220px 0 0;
+		max-width: 90px;
+	}
+	#logo_procesar img{
+		max-width: 100%;
+	}
+    .cuerpo{
+        padding-top: 28px;
+        height: 100%;
+        max-width: 80%;
+        left: 10%;        
+    }
+      .login_user > input{
+        margin-top: 9px;	    
+        min-width: 23.5%;
+        font-size: 12px;
+        text-align: center; 
+        
+    }
+     #btn-enviar{      
+	    min-width: 20%; 
+        
+        
+    }
+    .cuerpo h4{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .cuerpo p{
+        margin: 0px auto;
+        text-align: justify;
+        
+    }
+    @media screen and (min-width: 768px) and (max-width:1024px){
+         #btn-enviar{      
+	    min-width: 19%; 
+        
+        
+    }
+    }
+   
+    
+}
+
+			/*----------------------entre 1025 y 1280------------------------*/
+
+@media (min-width: 1025px) and (max-width: 1280px){
+	.cabecera{
+		max-height: 100px;
+	}
+
+	#logo_icap{
+		margin: 20px 0 0 150px;
+		max-width: 80px;
+	}
+	#logo_icap img{
+		max-width: 100%;
+	}
+
+
+	#logo_procesar{
+		margin: 25px 100px 0 0;
+		max-width: 90px;
+	}
+	#logo_procesar img{
+		max-width: 100%;
+	}
+    .cuerpo h4{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .cuerpo p{
+        margin: 0px auto;
+        text-align: justify;
+        
+    }
+     .login_user > input{
+       
+        min-width: 23.5%;
+        font-size: 12px;
+        text-align: center; 
+        
+    }
+      #btn-enviar{      
+	    min-width: 20%; 
+        
+        
+    }
+    
+
+}
+
+
+
+
+
+

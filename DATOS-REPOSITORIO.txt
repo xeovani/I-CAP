@@ -1,0 +1,7 @@
+NOMBRE DE LA CUENTA: 
+	USUARIO: XEOVANI
+	CORREO: Xeovani@yahoo.com.mx	
+	contraseña: Garcia28%
+	Nombre de repositorio: REPOSITORIO-MASTER(I-CAP.git)
+	
+ será la dirección que usemos más adelante: https://github.com/xeovani/I-CAP.git
