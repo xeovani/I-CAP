@@ -20,19 +20,9 @@ h1{
     color:#FFFFFF;
     letter-spacing: 2px;
 }
-hr{
-    background-color: #ffffff;
-    width: 155px;
-    height: 1px;
-    border: 0;
-    color: #ffffff;
-}
-
 .cabecera{
-
 	max-width: auto;
 	height: 120px;
-/*	background-color: #F58837;*/
     background-color: rgba(245,136,55,0.8);
 }
 
@@ -677,17 +667,12 @@ hr{
         left: -100%;
 
     }
-    .navegacion nav>ul>li{
+    .navegacion nav > ul> li{
         display: block;
         border-bottom: 1px solid #ffffff;
 
     }
-/*
-    .navegacion nav > ul > li > a{
-        font-size: 14px;
 
-    }
-*/
     .navegacion nav > ul > li:nth-last-of-type(1){
 
          margin-top: 10px;
@@ -769,32 +754,47 @@ hr{
 
     }
 	.cabecera{
-		max-height: 90px;
+        max-height: 90px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
 	}
 	#logo_icap{
-		margin: 25px 0 0 150px;
-		max-width: 60px;
+		width: 100px;
+        margin: 10px 2% 10px 7%;
+
 	}
 	#logo_icap img{
-		max-width: 100%;
+		width: 100px;
+        height: 100%
 
 	}
 	#logo_procesar{
-		margin: 25px 220px 0 0;
-		max-width: 90px;
+		margin: 20px 2% 0px 0px;
+		max-width: 200px;
 	}
 	#logo_procesar img{
 		max-width: 100%;
 	}
-    .cuerpo{
-        padding-top: 28px;
-        height: 100%;
-        max-width: 80%;
-        left: 10%;
+
+    .datos_usuario{
+       box-sizing: border-box;
+       max-width: 300px;
+       margin: auto;
+       padding: 1% 5%;
+       background-color: rgb(12,66,111);
+
     }
-      .login_user > input{
+    .datos_usuario input{
+        width: 55px;
+        background-color:#F58837;
+        border: none;
+    }
+    .login_user > input{
         margin-top: 9px;
-        min-width: 23.5%;
+        min-width: 33.5%;
         font-size: 12px;
         text-align: center;
 
@@ -813,9 +813,47 @@ hr{
         text-align: justify;
 
     }
+    .navegacion{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    }
+    .navegacion nav{
+        display: inline-block;
+        position: relative;
+        left: 0%;
+        max-width:70%;
+        background-color: #0C426F;
+        text-align: center;
+    }
+
+    .navegacion nav ul{
+        list-style:none;
+        position: relative;
 
 
 
+    }
+    .navegacion nav > ul > li{
+        display: inline-block;
+
+    }
+    .navegacion nav > ul > li > a{
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 21px 20px 20px;
+    }
+    .navegacion span{
+     position: relative;
+        top: 10px;
+        left: 0px;
+       height: 34px;
+    }
+    .navegacion span >input{
+        max-height: 100%;
+    }
 }
 
 			/*----------------------entre 1025 y 1280------------------------*/
@@ -823,24 +861,93 @@ hr{
 @media (min-width: 1025px) and (max-width: 1280px){
 	.cabecera{
 		max-height: 100px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
 	}
 
-	#logo_icap{
-		margin: 20px 0 0 150px;
-		max-width: 80px;
+    #logo_icap{
+		width: 100px;
+        margin: 10px 2% 10px 7%;
+
 	}
 	#logo_icap img{
-		max-width: 100%;
+		width: 100px;
+        height: 100%
+
 	}
-
-
 	#logo_procesar{
-		margin: 25px 100px 0 0;
-		max-width: 90px;
+		margin: 20px 2% 0px 0px;
+		max-width: 200px;
 	}
 	#logo_procesar img{
 		max-width: 100%;
+        height: 40px;
 	}
+
+    .datos_usuario{
+       box-sizing: border-box;
+       max-width: 300px;
+       margin: auto;
+       padding: 1% 5%;
+       background-color: rgb(12,66,111);
+
+    }
+    .datos_usuario input{
+        width: 55px;
+        background-color:#F58837;
+        border: none;
+    }
+
+
+/*---------------------------------------------------------------------------*/
+        .navegacion{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    }
+    .navegacion nav{
+        display: inline-block;
+        position: relative;
+        left: 0%;
+        max-width:70%;
+        background-color: #0C426F;
+        text-align: center;
+    }
+
+    .navegacion nav ul{
+        list-style:none;
+        position: relative;
+
+
+
+    }
+    .navegacion nav > ul > li{
+        display: inline-block;
+
+    }
+    .navegacion nav > ul > li > a{
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 21px 20px 20px;
+    }
+    .navegacion span{
+     position: relative;
+        top: 10px;
+        left: 0px;
+       height: 34px;
+    }
+    .navegacion span >input{
+        max-height: 100%;
+    }
+
+
+
+
+
     .cuerpo h4{
         margin: 0px auto;
         text-align: center;
