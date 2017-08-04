@@ -13,38 +13,48 @@ body{
 header{
 	width: 100%;
 }
-h1{
-	font-size: 20px;
-	text-align: center;
-	margin-bottom: 20px;
-    color:#FFFFFF;
-    letter-spacing: 2px;
-}
+
 .cabecera{
 	max-width: auto;
 	height: 120px;
     background-color: rgba(245,136,55,0.8);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
-#logo_icap{
-	max-width: 120px;
-	float: left;
-	margin: 20px 0 0 307px;
+    #logo_icap{
+		max-width: 150px;
+        min-width: 100px;
+        margin: 10px 2% 10px 7%;
 
-}
+	}
+	#logo_icap img{
+		width: 100%;
+        height: 100%;
 
-#logo_icap img{
-	max-width: 120px;
-}
-#logo_procesar{
-	float: right;
-	margin: 40px 325px 0 0px;
-}
+	}
+	#logo_procesar{
+		margin: 20px 2% 0px 0px;
+		max-width: 200px;
+	}
+	#logo_procesar img{
+		max-width: 100%;
+        height: 40px;
+	}
 
-#logo_procesar img{
-	max-width: 150px;
-	height: 30px;
-}
+    .datos_usuario{
+       box-sizing: border-box;
+       margin: auto;
+       padding: 1% 15%;
+       background-color: rgb(12,66,111);
+    }
+    .datos_usuario input{
+        width: 55px;
+        background-color:#F58837;
+        border: none;
+    }
 #linea_inf_header{
 
 	width: 100%;
@@ -57,7 +67,7 @@ h1{
 
 }
 .cabecera img:hover{
-	-ms-tranform: rotate(360deg);
+	-ms-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
 	-webkit-transition:1.5s;
 }
@@ -79,8 +89,14 @@ h1{
 	max-width: 62%;
 	height: 900px;
 	background-color: #000000;
-	padding-top: 43px;
 	background-color: rgba(0, 0, 0, 0.9);
+}
+.CRUD_user > ul{
+    display: flex;
+    display: -webkit-flex;
+}
+.CRUD_user > ul > li{
+
 }
 
 .login_user{
@@ -158,7 +174,7 @@ h1{
 .navegacion nav{
     position: relative;
 	top: 0px;
-    left: 30%;
+    left: 20%;
     display: inline-block;
     max-width: 62%;
     background-color: #0C426F;
@@ -208,7 +224,7 @@ h1{
 }
 .navegacion >span{
     position: relative;
-    left: 39.5%;
+    left: 22.5%;
 
 }
 .navegacion >span >input:first-child{
@@ -312,15 +328,13 @@ h1{
     color: #000000 !important;
 }
 
-   .cuerpo h4{
-        margin: 0px auto;
-        text-align: center;
-    }
-    .cuerpo p{
-        margin: 0px auto;
-        text-align: justify;
 
-    }
+.cuerpo p{
+    margin: 0px auto;
+    text-align: justify;
+
+}
+
 .menubar{
     display: none;
 }
@@ -352,7 +366,7 @@ h1{
         justify-content:space-between;
 	}
     .cuerpo{
-        padding-top: 28px;
+/*        padding-top: 28px;*/
         height: 612px;
         max-width: 100%;
         left: 0px;
@@ -387,6 +401,9 @@ h1{
         width: 55px;
         background-color:#F58837;
         border: none;
+    }
+    .datos_usuario br{
+        display: none;
     }
 
     .input_login{
@@ -480,6 +497,9 @@ h1{
     .navegacion nav > ul > li > a{
         font-size: 12px
 
+    }
+    .navegacion nav > ul > li:last-child{
+        display: none;
     }
 
     /* -----search-------*/
@@ -595,6 +615,9 @@ h1{
        background-color: rgb(12,66,111);
 
     }
+    .datos_usuario br{
+        display: none;
+    }
     .datos_usuario input{
         width: 55px;
         background-color:#F58837;
@@ -621,7 +644,7 @@ h1{
 
     }
     .cuerpo{
-        padding-top: 28px;
+/*        padding-top: 28px;*/
         height: 100%;
         max-width: 80%;
         left: 10.5%;
@@ -672,6 +695,10 @@ h1{
         border-bottom: 1px solid #ffffff;
 
     }
+    .navegacion nav > ul > li:last-child{
+        display: none;
+    }
+
 
     .navegacion nav > ul > li:nth-last-of-type(1){
 
@@ -888,9 +915,9 @@ h1{
 
     .datos_usuario{
        box-sizing: border-box;
-       max-width: 300px;
+/*       max-width: 300px;*/
        margin: auto;
-       padding: 1% 5%;
+       padding: 1% 10%;
        background-color: rgb(12,66,111);
 
     }
