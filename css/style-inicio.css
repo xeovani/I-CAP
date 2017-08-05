@@ -91,12 +91,19 @@ header{
 	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.9);
 }
+.CRUD_user{
+    box-sizing: border-box;
+    position: relative;
+
+}
 .CRUD_user > ul{
     display: flex;
     display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 .CRUD_user > ul > li{
-
+    margin: 10px;
 }
 
 .login_user{
