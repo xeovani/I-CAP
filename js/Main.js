@@ -72,7 +72,7 @@ $(document).ready(function(){
     console.log("menu: " + menu.length);
 
     console.log("submenu: " + submenu.length);
-      for(var i=0;i<=5;i++){
+      for(var i=0;i<=6;i++){
 
 
 
