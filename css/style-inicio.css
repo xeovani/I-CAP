@@ -94,16 +94,70 @@ header{
 .CRUD_user{
     box-sizing: border-box;
     position: relative;
-
+    border: 1px solid rgb(12,66,111);
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 5px;
+/*    border-bottom: none;*/
 }
 .CRUD_user > ul{
     display: flex;
     display: -webkit-flex;
+/*
     -webkit-justify-content: space-between;
     justify-content: space-between;
+*/
 }
 .CRUD_user > ul > li{
     margin: 10px;
+}
+.CRUD_user > ul > li:last-child{
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    margin-left: 85%;
+}
+.inf-solicitud{
+    width: 90%;
+    height: 80px;
+/*    background-color:  rgba(16, 113, 185, 0.7);*/
+    margin: auto;
+    border: 1px solid rgb(12,66,111);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    position: relative;
+    top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.form_solicitud{
+    background-color:#0C426F;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 15px;
+}
+.form_solicitud form{
+    -webkit-display:flex;
+    display: flex;
+    -webkit-flex-direction:column;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 20px
+}
+.form_solicitud > form > label{
+    margin: 10px;
+    width: 20%;
+
+}
+.form_solicitud > form > select{
+    width: 30%;
+    height: 30px;
+}
+.form_solicitud > form > input{
+    width: 30%;
+    height: 30px
 }
 
 .login_user{
