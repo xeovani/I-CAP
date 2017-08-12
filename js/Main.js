@@ -106,9 +106,6 @@ $(document).ready(function(){
 
            }
 
-        $( ".cd-select" ).click(function(){
-                $(this).;
-        });
 
 
 });
