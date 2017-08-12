@@ -48,7 +48,7 @@ header{
        box-sizing: border-box;
        margin: auto;
        padding: 1% 15%;
-       background-color: rgb(12,66,111);
+       background-color: rgb(16,113,185);
     }
     .datos_usuario input{
         width: 55px;
@@ -87,56 +87,90 @@ header{
 	left:18.5%;
 	right: 20%;
 	max-width: 62%;
-	height: 900px;
+	height: 100vh;
+    background-image: url(../imagenes/bg-body.jpg);
+/*
 	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.9);
-}
-.CRUD_user{
-    box-sizing: border-box;
-    position: relative;
-    border: 1px solid rgb(12,66,111);
-    width: 90%;
-    margin: auto;
-    position: relative;
-    top: 5px;
-/*    border-bottom: none;*/
-}
-.CRUD_user > ul{
-    display: flex;
-    display: -webkit-flex;
-/*
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
 */
 }
-.CRUD_user > ul > li{
-    margin: 10px;
-}
-.CRUD_user > ul > li:last-child{
-    -webkit-align-self: flex-start;
-    align-self: flex-start;
-    margin-left: 85%;
-}
+    .cuerpo .inf-solicitud{
+       background-color:#E5E5E5;
+       color: black;
+    }
+    .cuerpo .form_solicitud{
+        background-color:#E5E5E5;
+        color: black;
+
+    }
+    .cuerpo .form_solicitud select{
+    width: 40%;
+    }
+
+    .CRUD_user{
+        box-sizing: border-box;
+        position: relative;
+        border: none;
+        width: 90%;
+        margin: auto;
+        top: 0px;
+
+    }
+    .CRUD_user ul{
+        background-color: rgba(16, 113, 185, 1);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+    .CRUD_user > ul > li{
+        box-sizing: border-box;
+        padding: 10px 10px;
+
+
+    }
+    .CRUD_user > ul > li:nth-child(2){
+        margin-right: auto;
+    }
+
+    .CRUD_user > ul > li:hover{
+        background-color: rgb(12,66,111);
+    }
+
+
+
 .inf-solicitud{
     width: 90%;
     height: 80px;
 /*    background-color:  rgba(16, 113, 185, 0.7);*/
     margin: auto;
-    border: 1px solid rgb(12,66,111);
-    border-collapse: collapse;
     box-sizing: border-box;
     position: relative;
-    top: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
+    top: 0px;
+    padding: 10px;
+    border: 1px solid #BEBEBE;
+    border-collapse: collapse;
+    border-bottom: none;
+
 }
+    .inf-solicitud > p:first-child{
+        color: rgba(16, 113, 185, 1);
+        font-size: 16px;
+        font-weight: bold;
+    }
+
 .form_solicitud{
     background-color:#0C426F;
     width: 90%;
-    height: 100%;
+    height: 600px;
     margin: auto;
     position: relative;
-    top: 15px;
+    top: 0px;
+    border: 1px solid #BEBEBE;
+    border-collapse: collapse;
+/*    border-top: none;*/
+    box-sizing: border-box;
 }
 .form_solicitud form{
     -webkit-display:flex;
@@ -144,7 +178,10 @@ header{
     -webkit-flex-direction:column;
     flex-direction: column;
     box-sizing: border-box;
-    padding-left: 20px
+    padding-left: 20px;
+    width: 80%;
+    margin: auto;
+
 }
 .form_solicitud > form > label{
     margin: 10px;
@@ -153,12 +190,45 @@ header{
 }
 .form_solicitud > form > select{
     width: 30%;
-    height: 30px;
+    height: 25px;
+/*    background-color: rgba(12,66,111,0.3);*/
 }
 .form_solicitud > form > input{
     width: 30%;
-    height: 30px
+    height: 30px;
+    font-weight: bold;
 }
+    .form_solicitud > p:first-child{
+        display: inline-block;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+        color: rgb(16,113,185);
+        font-weight: bold;
+
+    }
+    .form_solicitud form > input{
+        margin-top: 20px;
+        margin-left: 450px;
+        width:30%;
+/*        border: 1px solid rgb(12,66,111);*/
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 97%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    }
+    .form_solicitud form > input:hover{
+        box-shadow: -6px 6px 5px #1e5799;
+
+
+    }
+
+
 
 .login_user{
 	margin: 0px auto;
@@ -328,16 +398,19 @@ header{
     text-decoration: none;
     display: block;
     padding: 10px 50px;
-    background-color: rgba(16, 113, 185, 0.7);
+/*    background-color: rgba(16, 113, 185, 0.7);*/
+    background-color: #0C426F;
 }
+/*
 .submenu-item > ul li:nth-child(3) > a {
     background-color: rgba(16, 113, 185, 0.5);
 
 }
+*/
 
 
 .submenu-item > ul > li{
-   border-bottom: 1px solid #0C426F;
+   border-bottom: 1px solid rgb(16, 113, 185);
 
 
 }
@@ -352,7 +425,8 @@ header{
     top: 10px;
     left: 40px;
     display: block;
-    color: rgba(16, 113, 185, 0.7);
+/*    color: rgba(16, 113, 185, 0.7);*/
+    color: #0C426F;
 }
 
 .submenu-item > ul > li a:hover{
@@ -402,22 +476,31 @@ header{
 
 /*Diseño reponsivo */
 
-			                    /*---------menor de 480px----------------*/
+			         /*-------------------------------menor de 480px-------------------------------*/
 
 @media(max-width: 480px) {
     body{
+/*
     background: url("../imagenes/fondo_gratis3.jpg") center center;
     background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 100%;
+    height: 100vh;
     width: 100%;
+*/
+        background: url("../imagenes/fondo_gratis3.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
     }
 	html{
 		font-size: 62.5%;
-        height: 100%;
+/*        height: 100vh;*/
         width: 100%;
 	}
 	.cabecera{
@@ -427,18 +510,17 @@ header{
         justify-content:space-between;
 	}
     .cuerpo{
-/*        padding-top: 28px;*/
-        height: 612px;
+        height: 100%;
         max-width: 100%;
         left: 0px;
-        background-color: rgba(0, 0, 0, 0.1);
-
+        background: rgba(0, 0, 0, 0.1);
     }
 
 	#logo_icap{
 
-		width: 15%;
-        margin: 10px 7px;
+		width: 1%;
+        height: 35px;
+        margin: 10px 1%;
 
 	}
 	#logo_icap img{
@@ -447,15 +529,17 @@ header{
 	}
 	#logo_procesar{
 		margin: 10px 2% 0px 0px;
+        height: 40px;
         max-width: 20%;
 	}
 	#logo_procesar img{
 		max-width: 100%;
 	}
     .datos_usuario{
-        background-color: rgb(12,66,111);
-        padding: 5px 15px 20px 5px;
-        margin: 10px;
+        background-color: rgba(16, 113, 185, 1);
+        padding: 5px 1% 22px 8px;
+        margin: 10px 1%;
+        box-sizing: border-box;
 
     }
     .datos_usuario input{
@@ -545,7 +629,7 @@ header{
         position: absolute;
         top: 167px;
 /*        overflow: scroll;*/
-        height: calc(100%);
+        height: calc(80%);
         z-index: 1000;
         left: -100%;
 /*        display: none;*/
@@ -624,8 +708,93 @@ header{
 
 
     }
+
+    .cuerpo .inf-solicitud{
+       background-color:#E5E5E5;
+       color: black;
+    }
+    .cuerpo .form_solicitud{
+        background-color:#E5E5E5;
+        color: black;
+    }
+    .cuerpo .form_solicitud select{
+    width: 90%;
+    }
+
+    /*--------------CRUD_USER---------*/
+
+    .CRUD_user{
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+    width: 90%;
+    margin: auto;
+    top: 0px;
+
+    }
+    .CRUD_user ul{
+        background-color: rgba(16, 113, 185, 1);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+
+    .CRUD_user > ul > li{
+        box-sizing: border-box;
+        padding: 10px 10px;
+/*        margin: 10px;*/
+
+    }
+    .CRUD_user > ul > li:nth-child(2){
+        margin-right: auto;
+    }
+    .CRUD_user > ul > li:hover{
+        background-color: rgb(12,66,111);
+    }
+    .inf-solicitud{
+        top:0px;
+        border: none;
+    }
+
+    .inf-solicitud > p:first-child{
+        color: rgba(16, 113, 185, 1);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .inf-solicitud > p:last-child{
+        display: inline;
+    }
+    .form_solicitud{
+        top: 0px;
+        border-top: 1px solid #BEBEBE;
+        box-sizing: border-box;
+        height: 430px;
+    }
+    .form_solicitud form > input{
+        margin-top: 20px;
+        width:90%;
+        border: 1px solid rgb(12,66,111);
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    }
+    .form_solicitud > p:first-child{
+        display: inline-block;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: rgb(16,113,185);
+    }
+
 }
-			/*-----------------------entre 481 a 768------------------------*/
+
+			        /*-------------------------------entre 481 a 768--------------------------------*/
+
 
 @media(min-width: 481px) and (max-width: 767px){
 /*
@@ -673,7 +842,7 @@ header{
        max-width: 300px;
        margin: auto;
        padding: 1% 5%;
-       background-color: rgb(12,66,111);
+       background-color: rgb(16,113,185);
 
     }
     .datos_usuario br{
@@ -705,10 +874,10 @@ header{
 
     }
     .cuerpo{
-/*        padding-top: 28px;*/
         height: 100%;
         max-width: 80%;
         left: 10.5%;
+        background-image: url(../imagenes/bg-body.jpg)
 
     }
     .cuerpo h4{
@@ -720,7 +889,23 @@ header{
         text-align: justify;
 
     }
-            /*    menu*/
+    .cuerpo .inf-solicitud{
+       background-color:#E5E5E5;
+       color: black;
+    }
+    .cuerpo .form_solicitud{
+        background-color:#E5E5E5;
+        color: black;
+    }
+    .cuerpo .form_solicitud select{
+    width: 90%;
+    }
+
+
+
+
+            /*-------menu-------*/
+
     .menubar{
         display: block;
         width: 100%;
@@ -825,11 +1010,81 @@ header{
 
     }
 
+/*-------------CRUD-USER----------*/
+        .CRUD_user{
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+    width: 90%;
+    margin: auto;
+    top: 0px;
+
+    }
+    .CRUD_user ul{
+        background-color: rgba(16, 113, 185, 1);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+
+    .CRUD_user > ul > li{
+        box-sizing: border-box;
+        padding: 10px 10px;
+/*        margin: 10px;*/
+
+    }
+    .CRUD_user > ul > li:nth-child(2){
+        margin-right: auto;
+    }
+    .CRUD_user > ul > li:hover{
+        background-color: rgb(12,66,111);
+    }
+    .inf-solicitud{
+        top:0px;
+        border: none;
+    }
+
+    .inf-solicitud > p:first-child{
+        color: rgba(16, 113, 185, 1);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .inf-solicitud > p:last-child{
+        display: inline;
+    }
+    .form_solicitud{
+        top: 0px;
+        border-top: 1px solid #BEBEBE;
+        box-sizing: border-box;
+        height: 430px;
+    }
+    .form_solicitud form > input{
+        margin-top: 20px;
+        width:90%;
+        border: 1px solid rgb(12,66,111);
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    }
+    .form_solicitud > p:first-child{
+        display: inline-block;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: rgb(16,113,185);
+    }
+
+
 
 
 
 }
-			/*--------------------entre 768 y 1024-----------------------*/
+			/*---------------------------------entre 768 y 1024-------------------------------------*/
 
 @media (min-width: 768px) and (max-width:1024px){
        body{
@@ -872,7 +1127,8 @@ header{
        max-width: 300px;
        margin: auto;
        padding: 1% 5%;
-       background-color: rgb(12,66,111);
+/*       background-color: rgb(12,66,111);*/
+        background-color: rgb(16,113,185);
 
     }
     .datos_usuario input{
@@ -892,6 +1148,14 @@ header{
 
 
     }
+    .cuerpo{
+        height: 100%;
+        max-width: 80%;
+        left: 10.5%;
+        background-image: url(../imagenes/bg-body.jpg)
+
+    }
+
     .cuerpo h4{
         margin: 0px auto;
         text-align: center;
@@ -901,6 +1165,19 @@ header{
         text-align: justify;
 
     }
+        .cuerpo .inf-solicitud{
+       background-color:#E5E5E5;
+       color: black;
+    }
+    .cuerpo .form_solicitud{
+        background-color:#E5E5E5;
+        color: black;
+    }
+    .cuerpo .form_solicitud select{
+    width: 50%;
+    }
+
+
     .navegacion{
     display: -webkit-flex;
     display: flex;
@@ -942,9 +1219,78 @@ header{
     .navegacion span >input{
         max-height: 100%;
     }
+    /*-------------CRUD-USER----------*/
+        .CRUD_user{
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+    width: 90%;
+    margin: auto;
+    top: 0px;
+
+    }
+    .CRUD_user ul{
+        background-color: rgba(16, 113, 185, 1);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+
+    .CRUD_user > ul > li{
+        box-sizing: border-box;
+        padding: 10px 10px;
+/*        margin: 10px;*/
+
+    }
+    .CRUD_user > ul > li:nth-child(2){
+        margin-right: auto;
+    }
+    .CRUD_user > ul > li:hover{
+        background-color: rgb(12,66,111);
+    }
+    .inf-solicitud{
+        top:0px;
+        border: none;
+    }
+
+    .inf-solicitud > p:first-child{
+        color: rgba(16, 113, 185, 1);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .inf-solicitud > p:last-child{
+        display: inline;
+    }
+    .form_solicitud{
+        top: 0px;
+        border-top: 1px solid #BEBEBE;
+        box-sizing: border-box;
+        height: 430px;
+    }
+    .form_solicitud form > input{
+        margin-top: 20px;
+        width:90%;
+        border: 1px solid rgb(12,66,111);
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    }
+    .form_solicitud > p:first-child{
+        display: inline-block;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: rgb(16,113,185);
+    }
+
 }
 
-			/*----------------------entre 1025 y 1280------------------------*/
+			/*-----------------------------------entre 1025 y 1280--------------------------------------*/
 
 @media (min-width: 1025px) and (max-width: 1280px){
 	.cabecera{
@@ -979,8 +1325,8 @@ header{
 /*       max-width: 300px;*/
        margin: auto;
        padding: 1% 10%;
-       background-color: rgb(12,66,111);
-
+/*       background-color: rgb(12,66,111);*/
+    background-color: rgb(16,113,185);
     }
     .datos_usuario input{
         width: 55px;
@@ -1031,9 +1377,13 @@ header{
     .navegacion span >input{
         max-height: 100%;
     }
+        .cuerpo{
+        height: 100%;
+        max-width: 80%;
+        left: 10.5%;
+        background-image: url(../imagenes/bg-body.jpg)
 
-
-
+    }
 
 
     .cuerpo h4{
@@ -1045,6 +1395,18 @@ header{
         text-align: justify;
 
     }
+    .cuerpo .inf-solicitud{
+       background-color:#E5E5E5;
+       color: black;
+    }
+    .cuerpo .form_solicitud{
+        background-color:#E5E5E5;
+        color: black;
+    }
+    .cuerpo .form_solicitud select{
+    width: 50%;
+    }
+
      .login_user > input{
 
         min-width: 23.5%;
@@ -1052,7 +1414,67 @@ header{
         text-align: center;
 
     }
+        /*-------------CRUD-USER----------*/
+        .CRUD_user{
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+    width: 90%;
+    margin: auto;
+    top: 0px;
 
+    }
+    .CRUD_user ul{
+        background-color: rgba(16, 113, 185, 1);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+
+    .CRUD_user > ul > li{
+        box-sizing: border-box;
+        padding: 10px 10px;
+
+    }
+    .CRUD_user > ul > li:nth-child(2){
+        margin-right: auto;
+    }
+    .CRUD_user > ul > li:hover{
+        background-color: rgb(12,66,111);
+    }
+    .inf-solicitud{
+        top:0px;
+        border: none;
+    }
+
+    .inf-solicitud > p:first-child{
+        color: rgba(16, 113, 185, 1);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .inf-solicitud > p:last-child{
+        display: inline;
+    }
+    .form_solicitud{
+        top: 0px;
+        border-top: 1px solid #BEBEBE;
+        box-sizing: border-box;
+        height: 430px;
+    }
+    .form_solicitud form > input{
+        margin-top: 20px;
+        width:90%;
+        border: 1px solid rgb(12,66,111);
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    }
 
 }
 
