@@ -169,6 +169,10 @@ header{
     .CRUD_user > ul > li:nth-child(2) > span{
         margin-left: 45px;
     }
+    /*----------cuerpo de semaforo---------------*/
+    .cuerpo-semaforo{
+    color: #000000;
+    }
 
     /*--------------piquito del tooltip-----------*/
     .CRUD_user > ul > li:last-child > span::after{
