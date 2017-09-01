@@ -20,9 +20,9 @@
 			<div id="logo_icap">
 				<img src="../imagenes/logo_icap.png" alt="imagen no encontrada">
 			</div>
-			<div class="datos_usuario">
+			<div class="datos_usuario" i>
                 <p>XEOVANI JUAREZ PEÑALOZA</p><br>
-			    <label for="">Duración de sesion <input type="text" value="04:52:00"></label>
+			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion"></label>
             </div>
 			<div id="logo_procesar">
 				<img src="../imagenes/logo-procesar.png" alt="imagen no encontrada">
@@ -118,67 +118,156 @@
 
     </div>
 	<section>
-			<div id="cuerpo" class="cuerpo">
-			    <div class="CRUD_user">
-			        <ul>
-<!--			            <li><a href=""><img src="../imagenes/icono-carpeta-abierta%20(1).png" alt=""></a></li>-->
-			            <li><a href=""><img src="../imagenes/icono-carpeta-cambio.png" alt=""></a>
-			                <span class="tooltip">CAMBIO Alt + W</span>
-			            </li>
-			            <li><a href=""><img src="../imagenes/icono-guardar.png" alt=""></a>
-			                <span class="tooltip">GUARDAR Alt + G</span>
-			            </li>
-			            <li><a href=""><img src="../imagenes/boton-de-cancelar-de-documento-de-texto.png" alt=""></a>
-			                <span class="tooltip">CANCELAR Alt + S</span>
-			            </li>
-			        </ul>
-			    </div>
-			    <div class="inf-solicitud">
-			            <p>Solicitud</p>
-			            <p>Información Adicional:<br>Indique por favor la solicitud de servicio que desea ingresar y después presione el botón de Aceptar</p>
-			    </div>
-			    <div class="form_solicitud">
-                    <p> > Solicitud de servicio</p>
-			        <form action="">
-			            <label for="">CLIENTE</label>
-			            <select name="" id="cd-dropdown" class="cd-select">
-			                <option value="-1" selected>SELECCIONE OPCION</option>
-			                <option value="1">INVERCAP</option>
-			                <option value="2">ISSEMYN</option>
-			                <option value="3">PRINCIPAL</option>
-			            </select>
-			            <label for="">SOLICITANTE</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">MÓDULO</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">TIPO DE SOLICITUD</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">SUBCONSULTA</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <input type="button" value="ACEPTAR">
-			        </form>
-			    </div>
+			<div id="cuerpo" class="cuerpo cuerpo-semaforo">
+			    <div class="semaforo">
+                   <h2>Solicitud de Servicios</h2>
+                   <div class="busqueda">
+                       <label for="">Mostrar</label>
+                       <select name="" id="">
+                           <option value="">10</option>
+                           <option value="">20</option>
+                           <option value="">30</option>
+                           <option value="">40</option>
+                           <option value="">Todo</option>
+                       </select>
+                       <label for="">Registros</label>
+                       <div class="label">Filtro</div>
+                       <input type="text">
+                   </div>
+                   <div class="contenedor-tabla">
+                       <table>
+                           <tr>
+                               <th>PRIORIDAD</th>
+                               <th>STADO</th>
+                               <th>SDES</th>
+                               <th>SOLICITUD</th>
+                               <th>ESTATUS</th>
+                               <th>CONSULTA</th>
+                               <th>FECHA/HORA DE CUMPLIMIENTO</th>
+                               <th></th>
+                           </tr>
 
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td><img src="../imagenes/exclamation.png" alt=""></td>
+                               <td>AIN170816-0000002</td>
+                               <td>FOVISSSTE</td>
+                               <td>ASIGNADA</td>
+                               <td>Atención a Institutos</td>
+                               <td>2017-08-18 07:12</td>
+                               <td><img src="../imagenes/pencil2.png" alt=""></td>
+                           </tr>
+                       </table>
+                   </div>
+                <div class="contenedor-paginacion">
+                    <p>Se encontraron 1,0006 registro(s) se muestran(1 al 10)</p>
+                    <div class="paginacion">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="">Anterior</a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">Siguiente</a></li>
+                            <li><a href="">fin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+			    </div>
 			</div>
 
 	</section>
