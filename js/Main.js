@@ -2,11 +2,13 @@ $(document).ready(function(){
 
 
 
-         $(".cont_img_tecl").hide().fadeIn(5000);
+         $(".cont_img_tecl").hide().fadeIn(2000);
 
-         $(".text_cuerpo >p").hide().slideDown(5000);
-         $(".text_cuerpo >H4").hide().slideDown(5000);
+         $(".text_cuerpo p,h4").hide().slideDown(2000);
 
+         $(".titulo-sem > h2").hide().slideDown(1000);
+
+    /*--------------------menu responsivo----------------*/
 
         var contador=1;
 
@@ -26,7 +28,7 @@ $(document).ready(function(){
 
 
 
-
+    /*------------------Efecto parallax-------------------*/
 
         $(window).scroll(function(){
             var barra = $(window).scrollTop();
@@ -61,6 +63,19 @@ $(document).ready(function(){
               }   */
 
 
+            /*-----------validacion de logeo---------------*/
+
+
+                        $(".login_user form").validationEngine();
+
+                        var usr=$("#Usuario").val();
+
+                        $("#btn-enviar").click(function(){
+                            var mayusculas= $("#Usuario").val().toUpperCase();
+                            $("#Usuario").val(mayusculas);
+
+                        });
+            /*-----------------Menu------------------------*/
 
      var menu = document.querySelectorAll(".navegacion nav > ul > li");
      var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
@@ -104,21 +119,10 @@ $(document).ready(function(){
 
 
 
-             /*---------------------select cliente----------------------*/
 
 
-                $("#CLIENTE").on('change',function(){
-                    var cliente = $(this).val();
-
-//                     $("#SOLICITANTE").
 
 
-                });
-
-           var CLIENTE= new Array;
-
-           CLIENTE[1]=["Aidé Liliana Lopez Lopez","Alan Arispe Treviño","Alan García Aguilar","Alejandro Flores Ruiz","Ana Isabel Ceja Hernández","Andres Coronado Carréon","Antonio Arias Sotero","Carlos Dávila Salazar","Carlos González Cano","Jesica Elena Olague Martínez","Karen Sarai Pérez Gloria",
-           "Manuel Alenadro Garcia Santos","Marcela Leal Santos","Margarita Castillo Ayala","Nestor Alfonso Lopez Martinez","Norma Elsa Alanis Gonzalez","Pedro Garcia Sanchez","Raul Alejandro Hernadez","","","","",""];
 
 
 
@@ -128,23 +132,6 @@ $(document).ready(function(){
 
 
 
-
-       /* function startTime(){
-        today=new Date();
-        h=today.getHours();
-        m=today.getMinutes();
-        s=today.getSeconds();
-        m=checkTime(m);
-        s=checkTime(s);
-        document.getElementById('reloj').value=h+":"+m+":"+s;
-            console.dir(h+":"+m+":"+s);
-        t=setTimeout('startTime()',500);}
-
-        function checkTime(i)
-        {if (i<10) {i="0" + i;}return i;}
-
-        window.onload=function(){startTime();}
-*/
 
                 /*-----------------------------------duracion de sesion--------------*/
 

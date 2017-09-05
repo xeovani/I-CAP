@@ -68,7 +68,7 @@ hr{
 
 }
 .cabecera img:hover{
-	-ms-tranform: rotate(360deg);
+	-ms-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
 	-webkit-transition:1.5s;
 }
@@ -446,7 +446,7 @@ hr{
 		max-width: 100%;
 	}
 
-    .login_user > input{
+    .login_user form > input{
         margin-top: 9px;
         min-width: 33.5%;
         font-size: 12px;
@@ -513,7 +513,7 @@ hr{
         max-width: 80%;
         left: 10%;
     }
-      .login_user > input{
+    .login_user form > input{
         margin-top: 9px;
         min-width: 23.5%;
         font-size: 12px;
@@ -571,7 +571,7 @@ hr{
         text-align: justify;
 
     }
-     .login_user > input{
+    .login_user form > input{
 
         min-width: 23.5%;
         font-size: 12px;
