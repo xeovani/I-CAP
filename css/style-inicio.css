@@ -105,7 +105,7 @@ header{
     .CRUD_user{
         box-sizing: border-box;
         position: relative;
-        border-bottom: 1px solid #BEBEBE;;
+        border-bottom: 1px solid #BEBEBE;
         width: 90%;
         margin: auto;
         top: 0px;
@@ -182,36 +182,64 @@ header{
     .busqueda-semaforo{
     height: 100px;
     background-color: rgba(16,113,185,0.8);
-/*
     display:flex;
     display: -webkit-flex;
     -webkit-justify-content:space-between;
     justify-content: space-between;
-*/
 
     }
     .busqueda-semaforo *{
-        margin: 10px;
         height: 20px;
     }
     .busqueda-semaforo input{
-        width: 240px;
+        min-width: 20%;
 
+    }
+    .registro, .filtro{
+        margin: auto;
     }
 
     .contenedor-tabla{
         background-color: rgba(16,113,185,0.8);
         font-size: 14px;
         width: 100%;
+        display:flex;
+        display: -webkit-flex;
     }
-    table{
+    .contenedor-tabla table{
         width: 100%
     }
-    .contenedor-tabla table tr{
-        border: 1px solid #0C426F;
+    .contenedor-tabla table thead {
+
+        text-align: center;
+        border: none !important;
+        background: rgba(12,66,111,.5);
+
 
     }
-    .semaforo div:first-child{
+
+
+    .contenedor-tabla table thead tr:first-child th{
+        padding: 10px 0px 10px 0px; !important;
+
+    }
+
+    .contenedor-tabla table tr >td{
+        border-top: 1px solid #0C426F;
+        text-align: center;
+        padding: 5px 0px 5px 0px;
+    }
+/*
+
+    .contenedor-tabla table tr:not(:only-child):hover{
+        background:#0C426F;
+        cursor:pointer;
+    }
+*/
+
+
+
+    .semaforo .titulo-sem{
         height: 60px;
         background: rgba(226,226,226,1);
         background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
@@ -232,6 +260,62 @@ header{
 
 
     }
+    .cont-paginacion .registros{
+        font-weight: bold;
+        color:#0C426F;
+        box-sizing: border-box;
+        height: 40px;
+        border-bottom: 1px solid #BEBEBE;
+        background: rgba(226,226,226,1);
+        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+    }
+    .registros > p{
+        box-sizing: border-box;
+        position: relative;
+        top: 16px;
+        left: 10px;
+        }
+    .paginacion{
+        height: 80px;
+        background: rgba(226,226,226,1);
+        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+
+    }
+    .paginacion ul{
+        position: relative;
+        top: 20px;
+        list-style-type: none;
+       text-align: center;
+    }
+    .paginacion ul li{
+       display: inline;
+/*       text-align: center;*/
+/*       margin: 0 1% 0 0;               */
+
+
+
+    }
+    .paginacion ul li a{
+
+       padding: 6px 7px 5px 7px;
+       color: #ffffff;
+       background-color: #0C426F;
+    /*   border: 1px solid #ccc;*/
+       text-decoration: none;
+    }
+
 
     /*--------------piquito del tooltip-----------*/
     .CRUD_user > ul > li:last-child > span::after{
@@ -502,6 +586,7 @@ header{
     border: none;
     text-indent: 12px
 }
+
 .navegacion >span >input:first-child + input{
     background-image: url(../imagenes/001-busqueda.png);
     background-repeat: no-repeat;
@@ -521,13 +606,14 @@ header{
     position: absolute;
     display: none;
 
+
 }
 
 .navegacion nav ul li:hover .submenu{
     display: flex;
     z-index: 1;
 }
-.navegacion nav > ul > li:first-of-type:hover{
+.navegacion nav > ul > li:hover{
     background-color: rgba(16, 113, 185, 0.6);
 
 }
@@ -537,6 +623,7 @@ header{
     display: block;
     padding: 10px 50px;
     background-color: #0C426F;
+
 
 }
 
@@ -595,7 +682,7 @@ header{
 }
 
 
-.cuerpo p{
+.text_cuerpo p{
     margin: 0px auto;
     text-align: justify;
 
@@ -621,7 +708,7 @@ header{
     height: 100vh;
     width: 100%;
 */
-        background: url("../imagenes/fondo_gratis3.jpg");
+    background: url("../imagenes/fondo_gratis3.jpg");
     background-attachment: fixed;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;

@@ -13,6 +13,10 @@
 	<script src="../js/css3-mediaqueries.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../js/Main.js"></script>
+	        <!--	            Plugin de validacion de formulario-->
+    <script src="../js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <script src="../js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+    <link rel="stylesheet" href="../js/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
 </head>
 <body>
 	<header>
@@ -124,147 +128,177 @@
                        <h2>Solicitudes de Servicio</h2>
                    </div>
                    <div class="busqueda-semaforo">
-                       <label for="">Mostrar</label>
-                       <select name="" id="">
-                           <option value="">10</option>
-                           <option value="">20</option>
-                           <option value="">30</option>
-                           <option value="">40</option>
-                           <option value="">Todo</option>
-                       </select>
-                       <label for="">Registros</label>
-                       <label for="">Filtro:</label>
-                       <input type="text">
+                      <div class="registro">
+                           <label for="">Mostrar</label>
+                           <select name="" id="">
+                               <option value="">10</option>
+                               <option value="">20</option>
+                               <option value="">30</option>
+                               <option value="">40</option>
+                               <option value="">Todo</option>
+                           </select>
+                           <label for="">Registros</label>
+                      </div>
+                      <div class="filtro">
+                           <label for="">Filtro:</label>
+                           <input type="text">
+                      </div>
                    </div>
                    <div class="contenedor-tabla">
                        <table>
-                           <tr>
-                               <th>PRIORIDAD</th>
-                               <th>ESTADO</th>
-                               <th>SDES</th>
-                               <th>SOLICITUD</th>
-                               <th>ESTATUS</th>
-                               <th>CONSULTA</th>
-                               <th>FECHA/HORA DE CUMPLIMIENTO</th>
-                               <th></th>
-                           </tr>
+                         <div>
+                              <thead>
+                               <tr>
+                                   <th>PRIORIDAD</th>
+                                   <th>ESTADO</th>
+                                   <th>SDES</th>
+                                   <th>SOLICITUD</th>
+                                   <th>ESTATUS</th>
+                                   <th>CONSULTA</th>
+                                   <th>FECHA/HORA DE CUMPLIMIENTO</th>
+                                   <th></th>
+                               </tr>
+                            </thead>
+                          </div>
+                          <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                         </div>
+                         <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                         </div>
+                          <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                           <div>
 
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
+                            <div>
+                               <tr>
+                                   <td>3</td>
+                                   <td><img src="../imagenes/exclamation1.png" alt=""></td>
+                                   <td>AIN170816-0000002</td>
+                                   <td>FOVISSSTE</td>
+                                   <td>ASIGNADA</td>
+                                   <td>Atención a Institutos</td>
+                                   <td>2017-08-18 07:12</td>
+                                   <td><img src="../imagenes/pencil2.png" alt=""></td>
+                               </tr>
+                           </div>
 
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
-                           <tr>
-                               <td>3</td>
-                               <td><img src="../imagenes/exclamation1.png" alt=""></td>
-                               <td>AIN170816-0000002</td>
-                               <td>FOVISSSTE</td>
-                               <td>ASIGNADA</td>
-                               <td>Atención a Institutos</td>
-                               <td>2017-08-18 07:12</td>
-                               <td><img src="../imagenes/pencil2.png" alt=""></td>
-                           </tr>
                        </table>
                    </div>
-                <div class="contenedor-paginacion">
-                    <p>Se encontraron 1,0006 registro(s) se muestran(1 al 10)</p>
+                <div class="cont-paginacion">
+                    <div class="registros">
+                        <p>Se encontraron 1,0006 registro(s) se muestran(1 al 10)</p>
+                    </div>
                     <div class="paginacion">
                         <ul>
-                            <li><a href="">Inicio</a></li>
-                            <li><a href="">Anterior</a></li>
+                            <li><a href=""><img src="../imagenes/step-backward.png" alt=""></a></li>
+                            <li><a href=""><img src="../imagenes/backward-arrows.png" alt=""></a></li>
                             <li><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
                             <li><a href="">4</a></li>
                             <li><a href="">5</a></li>
-                            <li><a href="">Siguiente</a></li>
-                            <li><a href="">fin</a></li>
+                            <li><a href=""><img src="../imagenes/fast-forward%20(1).png" alt=""></a></li>
+                            <li><a href=""><img src="../imagenes/media-end.png" alt=""></a></li>
                         </ul>
                     </div>
                 </div>

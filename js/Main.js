@@ -8,6 +8,19 @@ $(document).ready(function(){
 
          $(".titulo-sem > h2").hide().slideDown(1000);
 
+    /*-----------validacion de logeo---------------*/
+
+
+                        $(".login_user form").validationEngine();
+
+                        var usr=$("#Usuario").val();
+
+                        $("#btn-enviar").click(function(){
+                            var mayusculas= $("#Usuario").val().toUpperCase();
+                            $("#Usuario").val(mayusculas);
+
+                        });
+
     /*--------------------menu responsivo----------------*/
 
         var contador=1;
@@ -26,6 +39,12 @@ $(document).ready(function(){
             return false;
         });
 
+
+                $(".navegacion nav ~ span >input:first-child").focusin(function(){
+
+                    $(this).val(" ");
+
+                });
 
 
     /*------------------Efecto parallax-------------------*/
@@ -63,66 +82,92 @@ $(document).ready(function(){
               }   */
 
 
-            /*-----------validacion de logeo---------------*/
 
 
-                        $(".login_user form").validationEngine();
 
-                        var usr=$("#Usuario").val();
 
-                        $("#btn-enviar").click(function(){
-                            var mayusculas= $("#Usuario").val().toUpperCase();
-                            $("#Usuario").val(mayusculas);
 
-                        });
+
+
+
+
             /*-----------------Menu------------------------*/
+//
+//     var menu = document.querySelectorAll(".navegacion nav > ul > li");
+//     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
+//    console.log("menu: " + menu.length);
+//
+//    console.log("submenu: " + submenu.length);
+//      for(var i=0;i<=6;i++){
+//
+//
+//
+//                menu[i].onmouseover=
+//                    function(){
+//
+//                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
+//
+//                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
+//
+//
+//
+//
+//
+//
+//                    }
+//
+//
+//                menu[i].onmouseout=function(){
+//
+//                    $(this).css("background-color" , "#0C426F");
+//
+//
+//
+//                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
+//                                                                       "position" : "absolute",
+//                                                                       "display"  : "none"});   */
+//
+//
+//                    }
+//
+//           }
+            /*-----------------------------over de semaforo--------------------------*/
 
-     var menu = document.querySelectorAll(".navegacion nav > ul > li");
-     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
-    console.log("menu: " + menu.length);
+/*             $(".contenedor-tabla table tr").hover(
+                        function(){
+                            $(this).css("background-color","#0C426F");
+                        },
 
-    console.log("submenu: " + submenu.length);
-      for(var i=0;i<=6;i++){
+                        function(){
+                            $(this).css("background-color","rgba(16,113,185,0.1)");
 
 
-
-                menu[i].onmouseover=
-                    function(){
-
-                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
-
-                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
+                        });*/
 
 
 
 
+
+                var semaforo= document.querySelectorAll(".contenedor-tabla table tr");
+
+                    console.log(semaforo);
+                    for(var i=1;i<=semaforo.length;i++){
+
+                                        semaforo[i].onmouseover=
+                                            function(){//
+                                                $(this).css({"background":"#0C426F","cursor":"pointer"}).on("click",function(){
+                                                                                        $(this).css("background-color", "yellow");//cambiar la funcion para                                              //  que dirija a donde debe
+                                                                                        });
+
+                                            }
+
+                                        semaforo[i].onmouseout=
+                                            function(){
+                                                $(this).css("background","rgba(16,113,185,0.1)");
+                                            }
 
 
                     }
-
-
-                menu[i].onmouseout=function(){
-
-                    $(this).css("background-color" , "#0C426F");
-
-
-
-                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
-                                                                       "position" : "absolute",
-                                                                       "display"  : "none"});   */
-
-
-                    }
-
-           }
-
-
-
-
-
-
-
-
 
 
 

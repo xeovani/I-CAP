@@ -42,9 +42,9 @@
 				<div class="login_user">
 						<h1>INICIAR SESIÓN</h1>
 						<form action="#" method="post">
-                            <input type="text" id="Usuario" placeholder="USUARIO"  class="validate[required] text-input input_login img_usr">
+                            <input type="text" id="Usuario" placeholder="USUARIO"  class="validate[required,custom[onlyLetter]] text-input input_login img_usr">
                             <span class="validacion"></span>
-                            <input type="password" id="contraseña" placeholder="CONTRASEÑA" class="validate[required] text-input input_login img_pws">
+                            <input type="password" id="contraseña" placeholder="CONTRASEÑA" class="validate[required,custom[onlyLetterNumber]] text-input input_login img_pws">
                             <span class="validacion"></span>
                             <input type="submit" value="Enviar" id="btn-enviar" name="enviar">
                         </form>
