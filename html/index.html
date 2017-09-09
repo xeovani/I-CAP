@@ -14,7 +14,13 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
     </script>
-	<script src="../../js/Main.js"></script>
+
+       <script src="../../js/Main.js"></script>
+        <!--	            Plugin de validacion de formulario-->
+    <script src="../js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <script src="../js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+    <link rel="stylesheet" href="../js/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
+
 </head>
 <body>
 	<header>
@@ -35,10 +41,13 @@
 			<div id="cuerpo" class="cuerpo">
 				<div class="login_user">
 						<h1>INICIAR SESIÓN</h1>
-						<input type="text" id="input_usr" placeholder="USUARIO"  class="input_login img_usr">
-						<input type="password" id="input_pws" placeholder="CONTRASEÑA" class="input_login img_pws">
-						<input type="submit" value="Enviar" id="btn-enviar" name="enviar" onclick="alert('Hello World!')">
-
+						<form action="#" method="post">
+                            <input type="text" id="Usuario" placeholder="USUARIO"  class="validate[required,custom[onlyLetter]] text-input input_login img_usr">
+                            <span class="validacion"></span>
+                            <input type="password" id="contraseña" placeholder="CONTRASEÑA" class="validate[required,custom[onlyLetterNumber]] text-input input_login img_pws">
+                            <span class="validacion"></span>
+                            <input type="submit" value="Enviar" id="btn-enviar" name="enviar">
+                        </form>
 				</div>
 
 				<div class="cont_img_tecl">

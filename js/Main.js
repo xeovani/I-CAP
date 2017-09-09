@@ -2,11 +2,26 @@ $(document).ready(function(){
 
 
 
-         $(".cont_img_tecl").hide().fadeIn(5000);
+         $(".cont_img_tecl").hide().fadeIn(2000);
 
-         $(".text_cuerpo >p").hide().slideDown(5000);
-         $(".text_cuerpo >H4").hide().slideDown(5000);
+         $(".text_cuerpo p,h4").hide().slideDown(2000);
 
+         $(".titulo-sem > h2").hide().slideDown(1000);
+
+    /*-----------validacion de logeo---------------*/
+
+
+                        $(".login_user form").validationEngine();
+
+                        var usr=$("#Usuario").val();
+
+                        $("#btn-enviar").click(function(){
+                            var mayusculas= $("#Usuario").val().toUpperCase();
+                            $("#Usuario").val(mayusculas);
+
+                        });
+
+    /*--------------------menu responsivo----------------*/
 
         var contador=1;
 
@@ -25,8 +40,14 @@ $(document).ready(function(){
         });
 
 
+                $(".navegacion nav ~ span >input:first-child").focusin(function(){
+
+                    $(this).val(" ");
+
+                });
 
 
+    /*------------------Efecto parallax-------------------*/
 
         $(window).scroll(function(){
             var barra = $(window).scrollTop();
@@ -62,63 +83,91 @@ $(document).ready(function(){
 
 
 
-     var menu = document.querySelectorAll(".navegacion nav > ul > li");
-     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
-    console.log("menu: " + menu.length);
-
-    console.log("submenu: " + submenu.length);
-      for(var i=0;i<=6;i++){
-
-
-
-                menu[i].onmouseover=
-                    function(){
-
-                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
-
-                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
 
 
 
 
+
+
+
+
+            /*-----------------Menu------------------------*/
+//
+//     var menu = document.querySelectorAll(".navegacion nav > ul > li");
+//     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
+//    console.log("menu: " + menu.length);
+//
+//    console.log("submenu: " + submenu.length);
+//      for(var i=0;i<=6;i++){
+//
+//
+//
+//                menu[i].onmouseover=
+//                    function(){
+//
+//                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
+//
+//                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
+//
+//
+//
+//
+//
+//
+//                    }
+//
+//
+//                menu[i].onmouseout=function(){
+//
+//                    $(this).css("background-color" , "#0C426F");
+//
+//
+//
+//                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
+//                                                                       "position" : "absolute",
+//                                                                       "display"  : "none"});   */
+//
+//
+//                    }
+//
+//           }
+            /*-----------------------------over de semaforo--------------------------*/
+
+/*             $(".contenedor-tabla table tr").hover(
+                        function(){
+                            $(this).css("background-color","#0C426F");
+                        },
+
+                        function(){
+                            $(this).css("background-color","rgba(16,113,185,0.1)");
+
+
+                        });*/
+
+
+
+
+
+                var semaforo= document.querySelectorAll(".contenedor-tabla table tr");
+
+                    console.log(semaforo);
+                    for(var i=1;i<=semaforo.length;i++){
+
+                                        semaforo[i].onmouseover=
+                                            function(){//
+                                                $(this).css({"background":"#0C426F","cursor":"pointer"}).on("click",function(){
+                                                                                        $(this).css("background-color", "yellow");//cambiar la funcion para                                              //  que dirija a donde debe
+                                                                                        });
+
+                                            }
+
+                                        semaforo[i].onmouseout=
+                                            function(){
+                                                $(this).css("background","rgba(16,113,185,0.1)");
+                                            }
 
 
                     }
-
-
-                menu[i].onmouseout=function(){
-
-                    $(this).css("background-color" , "#0C426F");
-
-
-
-                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
-                                                                       "position" : "absolute",
-                                                                       "display"  : "none"});   */
-
-
-                    }
-
-           }
-
-
-
-
-             /*---------------------select cliente----------------------*/
-
-
-                $("#CLIENTE").on('change',function(){
-                    var cliente = $(this).val();
-
-//                     $("#SOLICITANTE").
-
-
-                });
-
-           var CLIENTE= new Array;
-
-           CLIENTE[1]=["Aidé Liliana Lopez Lopez","Alan Arispe Treviño","Alan García Aguilar","Alejandro Flores Ruiz","Ana Isabel Ceja Hernández","Andres Coronado Carréon","Antonio Arias Sotero","Carlos Dávila Salazar","Carlos González Cano","Jesica Elena Olague Martínez","Karen Sarai Pérez Gloria",
-           "Manuel Alenadro Garcia Santos","Marcela Leal Santos","Margarita Castillo Ayala","Nestor Alfonso Lopez Martinez","Norma Elsa Alanis Gonzalez","Pedro Garcia Sanchez","Raul Alejandro Hernadez","","","","",""];
 
 
 
@@ -128,23 +177,6 @@ $(document).ready(function(){
 
 
 
-
-       /* function startTime(){
-        today=new Date();
-        h=today.getHours();
-        m=today.getMinutes();
-        s=today.getSeconds();
-        m=checkTime(m);
-        s=checkTime(s);
-        document.getElementById('reloj').value=h+":"+m+":"+s;
-            console.dir(h+":"+m+":"+s);
-        t=setTimeout('startTime()',500);}
-
-        function checkTime(i)
-        {if (i<10) {i="0" + i;}return i;}
-
-        window.onload=function(){startTime();}
-*/
 
                 /*-----------------------------------duracion de sesion--------------*/
 
