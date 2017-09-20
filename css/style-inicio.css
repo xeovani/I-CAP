@@ -25,9 +25,11 @@ header{
 }
 
     #logo_icap{
-		max-width: 150px;
-        min-width: 100px;
-        margin: 10px 2% 10px 7%;
+        box-sizing: border-box;
+		width: 10%;
+        height: 90px;
+        margin: auto;
+
 
 	}
 	#logo_icap img{
@@ -36,19 +38,24 @@ header{
 
 	}
 	#logo_procesar{
-		margin: 20px 2% 50px 0px;
-		max-width: 200px;
+        box-sizing: border-box;
+		margin: auto;
+		max-width: 10%;
+        height: 50px;
 	}
 	#logo_procesar img{
 		max-width: 100%;
-        height: 40px;
+        height: 100%;;
 	}
 
     .datos_usuario{
        box-sizing: border-box;
        margin: auto;
-       padding: 1% 170px;
+       width: 40%;
+       height: 80px;
        background-color: rgb(16,113,185);
+       text-align: center;
+       padding-top: 14px;
     }
     .datos_usuario input{
         width: 60px;
@@ -164,7 +171,7 @@ header{
 
     }
     .CRUD_user > ul > li:first-child > span{
-        margin-left: -125px !important;
+        margin-left: -125px;
     }
     .CRUD_user > ul > li:nth-child(2) > span{
         margin-left: 45px;
@@ -203,11 +210,11 @@ header{
         background-color: rgba(16,113,185,0.8);
         font-size: 14px;
         width: 100%;
-        display:flex;
-        display: -webkit-flex;
+
     }
     .contenedor-tabla table{
-        width: 100%
+        width: 100%;
+
     }
     .contenedor-tabla table thead {
 
@@ -220,7 +227,7 @@ header{
 
 
     .contenedor-tabla table thead tr:first-child th{
-        padding: 10px 0px 10px 0px; !important;
+        padding: 10px 0px 10px 0px; /*cambio*/
 
     }
 
@@ -229,6 +236,7 @@ header{
         text-align: center;
         padding: 5px 0px 5px 0px;
     }
+
 /*
 
     .contenedor-tabla table tr:not(:only-child):hover{
@@ -277,9 +285,10 @@ header{
     }
     .registros > p{
         box-sizing: border-box;
+        width: 70%;
         position: relative;
-        top: 16px;
-        left: 10px;
+        top: 15px;
+
         }
     .paginacion{
         height: 80px;
@@ -308,14 +317,18 @@ header{
 
     }
     .paginacion ul li a{
-
        padding: 6px 7px 5px 7px;
        color: #ffffff;
        background-color: #0C426F;
-    /*   border: 1px solid #ccc;*/
        text-decoration: none;
     }
+    .paginacion ul li a:hover{
 
+    }
+    .paginacion img{
+        position: relative;
+        top: 2px;
+    }
 
     /*--------------piquito del tooltip-----------*/
     .CRUD_user > ul > li:last-child > span::after{
@@ -325,7 +338,7 @@ header{
         left: 100%;
         border-width: 5px;
         border-style: solid;
-        border-color:  transparent transparent transparent #1071b9;
+        border-color:  transparent transparent transparent #1071b9 !important;
     }
     .CRUD_user > ul > li:first-child > span::after{
         content: "";
@@ -334,7 +347,7 @@ header{
         left: 100%;
         border-width: 5px;
         border-style: solid;
-        border-color:  transparent transparent transparent #1071b9;
+        border-color:  transparent transparent transparent #1071b9 !important;
     }
     .CRUD_user > ul > li:nth-child(2) > span::after{
         content: "";
@@ -343,7 +356,7 @@ header{
         right: 100%;
         border-width: 5px;
         border-style: solid;
-        border-color:  transparent #1071b9 transparent transparent ;
+        border-color:  transparent #1071b9 transparent transparent !important;
 
     }
     /*----------------------------------------------------*/
@@ -541,13 +554,21 @@ header{
 }
 .navegacion nav > ul > li{
     display: inline-block;
+    margin-left: -4px;
+    border-left: 1px solid #ffffff;
+    box-sizing: border-box;
 
+}
+.navegacion nav > ul > li:last-child{
+    border-right: 1px solid #ffffff;
+    box-sizing: border-box;
 }
 .navegacion nav > ul > li > a{
     color: #fff;
     text-decoration: none;
     display: block;
     padding: 21px 20px 20px;
+
 }
 
 
@@ -643,7 +664,6 @@ header{
     top: 10px;
     left: 40px;
     display: block;
-/*    color: rgba(16, 113, 185, 0.7);*/
     color: #0C426F;
 }
 
@@ -708,13 +728,13 @@ header{
     height: 100vh;
     width: 100%;
 */
-    background: url("../imagenes/fondo_gratis3.jpg");
-    background-attachment: fixed;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url("../imagenes/fondo_mobil.jpg") !important;
+    background-attachment: fixed !important;
+	background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
     }
 	html{
 		font-size: 62.5%;
@@ -735,14 +755,14 @@ header{
     }
 
 	#logo_icap{
-
-		width: 1%;
-        height: 35px;
-        margin: 10px 1%;
+       box-sizing: border-box;
+       width: 20%;
+       height: 35px;
+       margin: 10px 2%;
 
 	}
 	#logo_icap img{
-		max-width: 100%;
+		width: 100%;
 
 	}
 	#logo_procesar{
@@ -755,15 +775,17 @@ header{
 	}
     .datos_usuario{
         background-color: rgba(16, 113, 185, 1);
-        padding: 5px 1% 22px 8px;
+        height: 80%;
         margin: 10px 1%;
         box-sizing: border-box;
+        padding-top: 2%;
 
     }
     .datos_usuario input{
-        width: 55px;
+        width: 30%;
         background-color:#F58837;
         border: none;
+        font-size: 10px;
     }
     .datos_usuario br{
         display: none;
@@ -837,6 +859,9 @@ header{
          background: rgba(16, 113, 185, 1);
 
     }
+    .menubar .btn-menu:hover{
+        background:#0c426f;
+    }
 
     .menubar a:last-child{
         float: right;
@@ -872,19 +897,21 @@ header{
     .navegacion > span{
         position: relative;
         left: 0px;
-        display: inline;
+        display: flex;
 
     }
     .navegacion >span >input:first-child{
 
         font-weight: bold;
         border: none;
-        width: 78%;
+        width: 92%;
         text-indent: 20px;
 
     }
    .navegacion >span >input:first-child + input{
-        padding: 8px 9% 8.5px 10%;
+       box-sizing: border-box;
+       width: 8%;
+/*        padding: 8px 9% 8.5px 10%;*/
         background-position: 50% 5px;
 
     }
@@ -921,7 +948,7 @@ header{
     }
 
     .submenu-item > ul > li{
-       border-top: 1px solid #0C426F;
+       border-top: 1px solid #0c426f;
         border-bottom: none;
 
 
@@ -1011,9 +1038,83 @@ header{
     .form_solicitud > form > input{
         margin-left: 0px;
     }
+    /*---------semaforo----------*/
+    .titulo-sem{
+        height: 40px !important;
+    }
+    .busqueda-semaforo{
+        height: 60px;
+    }
+    .contenedor-tabla{
+        font-size: 10px;
+        overflow-x: scroll;
+    }
+    .filtro{
+        height: 30px;
+    }
+    .filtro >input{
+        width: 70%;
+    }
+    /*----------tooltip----------*/
+    .tooltip{
+        position: absolute;
+        top: 10px;
+        padding: 1%;
+        opacity: 0;
+        border-radius: 2px;
+        z-index: 1;
+        visibility: hidden;
+        font-size: 12px;
+        background-color: #0C426F;
+        transition: opacity 1s;
+    }
+    .CRUD_user > ul > li:first-child > span{
+        box-sizing: border-box;
+        left: 180px;
+    }
+
+
+
+
+        /*--------------piquito del tooltip-----------*/
+    .CRUD_user > ul > li:last-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent transparent transparent #0C426F !important;
+    }
+    .CRUD_user > ul > li:first-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent !important;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent !important;
+
+    }
+    /*-----paginacion--------*/
+
+    .paginacion > ul > li > a >img{
+     box-sizing: border-box;
+     position: relative;
+     top: 3px;
+    }
+
 
 }
-
 			        /*-------------------------------entre 481 a 768--------------------------------*/
 
 
@@ -1029,7 +1130,7 @@ header{
 
     }
 */
-    html{
+    body{
 		font-size: 93%;
 	}
 	.cabecera{
@@ -1042,6 +1143,7 @@ header{
 	}
 	#logo_icap{
 		width: 100px;
+        height: auto;
         margin: 10px 2% 10px 7%;
 
 	}
@@ -1052,7 +1154,7 @@ header{
 	}
 	#logo_procesar{
 		margin: 20px 2% 0px 0px;
-		max-width: 200px;
+		max-width: 20%;
 	}
 	#logo_procesar img{
 		max-width: 100%;
@@ -1060,9 +1162,10 @@ header{
 
     .datos_usuario{
        box-sizing: border-box;
-       max-width: 300px;
+       max-width: 40%;
+        height: 60px;
        margin: auto;
-       padding: 1% 5%;
+       font-size: 14px;
        background-color: rgb(16,113,185);
 
     }
@@ -1110,14 +1213,11 @@ header{
         text-align: justify;
 
     }
-    .cuerpo .inf-solicitud{
+    .cuerpo .inf-solicitud,.form_solicitu{
        background-color:#E5E5E5;
        color: black;
     }
-    .cuerpo .form_solicitud{
-        background-color:#E5E5E5;
-        color: black;
-    }
+
     .cuerpo .form_solicitud select{
     width: 90%;
     }
@@ -1128,7 +1228,7 @@ header{
             /*-------menu-------*/
 
     .menubar{
-        display: block;
+        display: block !important;
         width: 100%;
         top: 70px;
         background: rgba(16, 113, 185, 1);
@@ -1143,13 +1243,16 @@ header{
          background: rgba(16, 113, 185, 1);
 
     }
+    .menubar .btn-menu:hover{
+        background-color: #0C426F;
+    }
 
     .menubar a:last-child{
         float: right;
     }
 
     .navegacion nav{
-        width: 80%;
+        width: 45%;
         position: fixed;
         top: 182px;
         height: calc(100%);
@@ -1302,6 +1405,63 @@ header{
     .form_solicitud > form > input{
         margin-left: 0px;
     }
+     /*----------tooltip----------*/
+    .tooltip{
+        position: absolute;
+        top: 10px;
+        padding: 1%;
+        opacity: 0;
+        border-radius: 2px;
+        z-index: 1;
+        visibility: hidden;
+        font-size: 12px;
+        background-color: #0C426F;
+        transition: opacity 1s;
+    }
+    .CRUD_user > ul > li:first-child > span{
+        box-sizing: border-box;
+        margin-left: 45px;
+    }
+
+
+        /*--------------piquito del tooltip-----------*/
+    .CRUD_user > ul > li:last-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent transparent transparent #0C426F !important;
+    }
+    .CRUD_user > ul > li:first-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent  !important;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent !important;
+
+    }
+    /*-----semaforo--------*/
+    .contenedor-tabla{
+       font-size: 93% !important;
+       overflow-x: scroll;
+    }
+    .registros{
+        font-size: 12px;
+        height: 50px !important;
+    }
 
 
 
@@ -1311,17 +1471,11 @@ header{
 			/*---------------------------------entre 768 y 1024-------------------------------------*/
 
 @media (min-width: 768px) and (max-width:1024px){
-       body{
-    background: url("../imagenes/fondo_mobil.jpg") center center fixed;
-    background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-
-    }
+    body{
+		font-size: 93%;
+	}
 	.cabecera{
-        max-height: 90px;
+		max-height: 80px;
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: space-between;
@@ -1330,17 +1484,18 @@ header{
 	}
 	#logo_icap{
 		width: 100px;
+        height: auto;
         margin: 10px 2% 10px 7%;
 
 	}
 	#logo_icap img{
 		width: 100px;
-        height: 100%
+        height: 100%;
 
 	}
 	#logo_procesar{
 		margin: 20px 2% 0px 0px;
-		max-width: 200px;
+		max-width: 20%;
 	}
 	#logo_procesar img{
 		max-width: 100%;
@@ -1348,12 +1503,15 @@ header{
 
     .datos_usuario{
        box-sizing: border-box;
-       max-width: 300px;
+       max-width: 40%;
+        height: 60px;
        margin: auto;
-       padding: 1% 5%;
-/*       background-color: rgb(12,66,111);*/
-        background-color: rgb(16,113,185);
+       font-size: 14px;
+       background-color: rgb(16,113,185);
 
+    }
+    .datos_usuario br{
+        display: none;
     }
     .datos_usuario input{
         width: 55px;
@@ -1367,9 +1525,17 @@ header{
         text-align: center;
 
     }
-     #btn-enviar{
-	    min-width: 20%;
+    .cont_img_tecl{
+        min-width: 78.3%;
+        height: 203px;
+        margin: 28px auto 0px;
 
+    }
+    #btn-enviar{
+        margin-top: 9px;
+	    display: block;
+        min-width: 99%;
+        font-size: 1em;
 
     }
     .cuerpo{
@@ -1379,7 +1545,6 @@ header{
         background-image: url(../imagenes/fondoIV.png)
 
     }
-
     .cuerpo h4{
         margin: 0px auto;
         text-align: center;
@@ -1389,61 +1554,131 @@ header{
         text-align: justify;
 
     }
-        .cuerpo .inf-solicitud{
+    .cuerpo .inf-solicitud,.form_solicitu{
        background-color:#E5E5E5;
        color: black;
     }
-    .cuerpo .form_solicitud{
-        background-color:#E5E5E5;
-        color: black;
-    }
+
     .cuerpo .form_solicitud select{
-    width: 50%;
+    width: 90%;
     }
 
 
-    .navegacion{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+
+
+            /*-------menu-------*/
+
+    .menubar{
+        display: block !important;
+        width: 100%;
+        top: 70px;
+        background: rgba(16, 113, 185, 1);
     }
-    .navegacion nav{
+    .menubar .btn-menu{
         display: inline-block;
-        position: relative;
-        left: 0%;
-        max-width:70%;
+        padding: 20px ;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bold;
+         background: rgba(16, 113, 185, 1);
+
+    }
+    .menubar .btn-menu:hover{
         background-color: #0C426F;
-        text-align: center;
     }
 
-    .navegacion nav ul{
-        list-style:none;
+    .menubar a:last-child{
+        float: right;
+    }
+
+    .navegacion nav{
+        width: 40%;
+        position: fixed;
+        top: 182px;
+        height: calc(100%);
+        z-index: 1000;
+        left: -100%;
+
+    }
+    .navegacion nav > ul> li{
+        display: block;
+        border-bottom: 1px solid #ffffff;
+
+    }
+    .navegacion nav > ul > li:last-child{
+        display: none;
+    }
+
+
+    .navegacion nav > ul > li:nth-last-of-type(1){
+
+         margin-top: 10px;
+         display: none;
+    }
+    .navegacion nav ul li .submenu{
+        padding: 0px;
         position: relative;
-
-
-
-    }
-    .navegacion nav > ul > li{
-        display: inline-block;
+        display: none;
 
     }
-    .navegacion nav > ul > li > a{
+
+    .navegacion nav ul li:hover .submenu{
+        display: flex;
+        z-index: 1;
+    }
+    .submenu-item > ul > li:nth-child(1){
+        display: none;
+    }
+    .submenu .submenu-item{
+        width: 100%;
+    }
+    .submenu-item > ul > li > a{
         color: #fff;
         text-decoration: none;
         display: block;
-        padding: 21px 20px 20px;
+        padding: 10px auto;
+        background-color: rgba(16, 113, 185, 0.7);
+        font-size: 12px;
     }
-    .navegacion span{
-     position: relative;
-        top: 10px;
+    .submenu-item > ul > li{
+       border-top: 1px solid #0C426F;
+       border-bottom: none;
+
+
+    }
+     .submenu-item > ul > li > a:hover{
+        text-decoration: underline;
+    }
+
+        /* -----search-------*/
+
+
+
+    .navegacion > span{
+        position: relative;
         left: 0px;
-       height: 34px;
+        display: -webkit-flex;
+        display: flex;
     }
-    .navegacion span >input{
-        max-height: 100%;
+    .navegacion >span >input:first-child{
+
+        font-weight: bold;
+        border: none;
+        width: 34%;
+        text-indent: 20px;
+        margin-left: 60%;
+
     }
-    /*-------------CRUD-USER----------*/
+   .navegacion >span >input:first-child + input{
+        padding: 8px 20px 8.5px;
+        background-position: 50% 5px;
+
+    }
+    .navegacion >span input{
+
+    }
+/*-------------CRUD-USER----------*/
         .CRUD_user{
     box-sizing: border-box;
     position: relative;
@@ -1496,7 +1731,7 @@ header{
     }
     .form_solicitud form > input{
         margin-top: 20px;
-        width:50%;
+        width:90%;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
         background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
@@ -1514,6 +1749,60 @@ header{
     .form_solicitud > form > input{
         margin-left: 0px;
     }
+     /*----------tooltip----------*/
+    .tooltip{
+        position: absolute;
+        top: 10px;
+        padding: 1%;
+        opacity: 0;
+        border-radius: 2px;
+        z-index: 1;
+        visibility: hidden;
+        font-size: 12px;
+        background-color: #0C426F;
+        transition: opacity 1s;
+    }
+    .CRUD_user > ul > li:first-child > span{
+        box-sizing: border-box;
+        margin-left: 45px;
+    }
+
+
+        /*--------------piquito del tooltip-----------*/
+    .CRUD_user > ul > li:last-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent transparent transparent #0C426F !important;
+    }
+    .CRUD_user > ul > li:first-child > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent  !important;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span::after{
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent #0C426F transparent transparent !important;
+
+    }
+    /*-----tabla-semaforo-------*/
+    .contenedor-tabla{
+       overflow-x: scroll;
+    }
+
+
 
 
 }
@@ -1536,7 +1825,7 @@ header{
 	}
 	#logo_icap img{
 		width: 100px;
-        height: 100%
+        height: 100%;
 
 	}
 	#logo_procesar{
@@ -1563,8 +1852,8 @@ header{
     }
 
 
-/*---------------------------------------------------------------------------*/
-        .navegacion{
+/*-------------------------------menu--------------------------------------------*/
+    .navegacion{
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
@@ -1572,8 +1861,8 @@ header{
     }
     .navegacion nav{
         display: inline-block;
-        position: relative;
-        left: 0%;
+        position: relative !important;
+        left: 0% !important;
         max-width:70%;
         background-color: #0C426F;
         text-align: center;
@@ -1583,18 +1872,27 @@ header{
         list-style:none;
         position: relative;
 
+    }
+    .navegacion nav > ul{
+        display: flex;
+        display: -webkit-flex;
 
 
     }
+    .navegacion nav > ul a{
+        font-size: 14px;
+    }
     .navegacion nav > ul > li{
         display: inline-block;
-
+        border: none !important;
+/*        margin-left: -4px;    */
     }
     .navegacion nav > ul > li > a{
         color: #fff;
         text-decoration: none;
         display: block;
         padding: 21px 20px 20px;
+
     }
     .navegacion span{
      position: relative;
@@ -1643,7 +1941,7 @@ header{
 
     }
         /*-------------CRUD-USER----------*/
-        .CRUD_user{
+    .CRUD_user{
     box-sizing: border-box;
     position: relative;
     border: none;
@@ -1653,7 +1951,7 @@ header{
 
     }
     .CRUD_user ul{
-        background-color: rgba(16, 113, 185, 1);
+/*        background-color: rgba(16, 113, 185, 1);*/
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: space-between;
@@ -1710,8 +2008,17 @@ header{
 
 }
 
+/*-----------------------------------------mayor a 1281---------------------------------*/
+@media (min-width:1281px){
+    .navegacion nav{
+        position: relative !important;
+        top: 0px;
+        left: 20% !important;
+        display: inline-block;
+        max-width: 62%;
+        background-color: #0C426F;
+        text-align: center;
+    }
 
 
-
-
-
+}
