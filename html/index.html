@@ -16,10 +16,6 @@
     </script>
 
        <script src="../../js/Main.js"></script>
-        <!--	            Plugin de validacion de formulario-->
-    <script src="../js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
-    <script src="../js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
-    <link rel="stylesheet" href="../js/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
 
 </head>
 <body>
@@ -42,9 +38,9 @@
 				<div class="login_user">
 						<h1>INICIAR SESIÓN</h1>
 						<form action="#" method="post">
-                            <input type="text" id="Usuario" placeholder="USUARIO"  class="validate[required,custom[onlyLetter]] text-input input_login img_usr">
+                            <input type="text" id="Usuario" placeholder="USUARIO"  class="text-input input_login img_usr" required pattern="[A-Za-z]{1,20}" title="Solo permite letras sin espacios">
                             <span class="validacion"></span>
-                            <input type="password" id="contraseña" placeholder="CONTRASEÑA" class="validate[required,custom[onlyLetterNumber]] text-input input_login img_pws">
+                            <input type="password" id="contraseña" placeholder="CONTRASEÑA" class="text-input input_login img_pws" required pattern="[A-Za-z0-9]{1,20}" title="Solo permite letras y numeros, sin espacion vacios">
                             <span class="validacion"></span>
                             <input type="submit" value="Enviar" id="btn-enviar" name="enviar">
                         </form>

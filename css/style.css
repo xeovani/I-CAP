@@ -337,23 +337,24 @@ hr{
 
 @media (max-width: 480px) {
     body{
-    background: url("../imagenes/fondo_mobil.jpg") center center fixed;
-    background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url("../imagenes/fondo_mobil.jpg") center center fixed !important;
+    background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
 
     }
 	html{
 		font-size: 62.5%;
+        height: vh100;
 	}
 	.cabecera{
 		max-height: 60px;
 	}
     .cuerpo{
         padding-top: 28px;
-        height: 100%;
+        height: vh100;
         max-width: 80%;
         left: 10.5%;
 

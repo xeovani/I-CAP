@@ -10,16 +10,10 @@ $(document).ready(function(){
 
     /*-----------validacion de logeo---------------*/
 
+/*
 
-                        $(".login_user form").validationEngine();
 
-                        var usr=$("#Usuario").val();
-
-                        $("#btn-enviar").click(function(){
-                            var mayusculas= $("#Usuario").val().toUpperCase();
-                            $("#Usuario").val(mayusculas);
-
-                        });
+*/
 
     /*--------------------menu responsivo----------------*/
 
@@ -39,12 +33,14 @@ $(document).ready(function(){
             return false;
         });
 
+/*
 
                 $(".navegacion nav ~ span >input:first-child").focusin(function(){
 
                     $(this).val(" ");
 
                 });
+*/
 
 
     /*------------------Efecto parallax-------------------*/
@@ -171,6 +167,18 @@ $(document).ready(function(){
 
 
 
+
+                       $(".login_user form").validationEngine();
+
+                        var usr=$("#Usuario").val();
+
+                        $("#btn-enviar").click(function(){
+                            var mayusculas= $("#Usuario").val().toUpperCase();
+                            $("#Usuario").val(mayusculas);
+
+                        });
+
+
 });
 
 
@@ -212,6 +220,9 @@ $(document).ready(function(){
                         }
 
                         window.onload=iniciarConteo;
+
+
+
 
 
 
