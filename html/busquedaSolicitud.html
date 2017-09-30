@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>I-cap</title>
+	<meta content="IE=edge,IE=9; IE=8; IE=7, chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" media="all" href="../css/reset.css" MEDIA=screen>
+
+	<link rel="stylesheet" type="text/css" href="../css/style-inicio.css" MEDIA=screen>
+	<link rel="stylesheet" type="text/css" href="../css/fontello.css" MEDIA=screen>
+	<link rel="shorcut icon" href="../imagenes/ike.ico">
+	<script src="../js/css3-mediaqueries.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/Main.js"></script>
+</head>
+<body>
+	<header>
+		<div class="cabecera">
+			<div id="logo_icap">
+				<img src="../imagenes/logo_icap.png" alt="imagen no encontrada">
+			</div>
+			<div class="datos_usuario" i>
+                <p>XEOVANI JUAREZ PEÑALOZA</p><br>
+			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion"></label>
+            </div>
+			<div id="logo_procesar">
+				<img src="../imagenes/logo-procesar.png" alt="imagen no encontrada">
+			</div>
+			<div id="logo-buscar"></div>
+		</div>
+		<div id="linea_inf_header">
+		</div>
+
+	</header>
+    <div class="menubar">
+            <a href="" class="btn-menu"><span><img src="../imagenes/btn-menu1.png" alt=""></span></a>
+            <a href="" class="btn-menu"><span><img src="../imagenes/logout2.png" alt=""></span></a>
+    </div>
+	<div class="navegacion">
+
+       <nav>
+            <ul>
+                <li>
+                    <a href="#" style="padding:18px 30px 20px"><img src="../imagenes/home (2).png" alt="imagen no encontrada"></a>
+
+                </li>
+                <li class="hover">
+                    <a href="#">Solicitudes</a>
+                    <div class="submenu">
+
+                        <div class="submenu-item">
+                            <ul>
+                                <li><span class="icon-up-dir"></span></li>
+                                <li><a href="#">Nuevo</a></li>
+                                <li><a href="#">Busqueda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Reportes</a>
+                    <div class="submenu">
+                        <div class="submenu-item">
+                            <ul>
+                                <li><span class="icon-up-dir"></span></li>
+                                <li><a href="#">Resumen</a></li>
+                                <li><a href="#">bitacora</a></li>
+                                <li><a href="#">Reporte</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Resumen</a>
+                    <div class="submenu">
+                        <div class="submenu-item">
+                            <ul>
+                                <li><span class="icon-up-dir"></span></li>
+                                <li><a href="#">Resumen</a></li>
+                                <li><a href="#">Grafica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Ayuda</a>
+                    <div class="submenu">
+                        <div class="submenu-item">
+                            <ul>
+                                <li><span class="icon-up-dir"></span></li>
+                                <li><a href="#">Manual</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Capacitación</a>
+                    <div class="submenu">
+                        <div class="submenu-item">
+                            <ul>
+                                <li><span class="icon-up-dir"></span></li>
+                                <li><a href="#">Procesar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Cerrar Sesión</a>
+                </li>
+
+            </ul>
+        </nav>
+        <span>
+            <input type="text" placeholder="Buscar . ." class="micolor">
+            <input type="submit" value=" " id="btn-buscar">
+        </span>
+
+    </div>
+	<section>
+			<div id="cuerpo" class="cuerpo">
+                     <div class="tituloBusqueda titulo-sem">
+                             <h2>> Busqueda de Solicitudes</h2>
+                     </div >
+                     <div class="inf-solicitud">
+                         <p>Instrucciones:<br>Para iniciar la busqueda por favor dar click en el boton "Filtrar busqueda".</p>
+                     </div>
+                     <div class="cuerpoBusqueda">
+                         <div class="BusqSolicitud">
+                             <div class="MostRegist">
+
+                                 <a href=""><img src="../imagenes/document-search-interface-symbol(4).png" alt=""></a>
+                                 <label for="">Filtrar busqueda</label>
+                             </div>
+                             <div class="MostRegist">
+                                 <label for="">Mostrar</label>
+                                    <select name="" id="" style="width:120px">
+                                         <option value="">10 solicitudes</option>
+                                         <option value="">20</option>
+                                         <option value="">30</option>
+                                         <option value="">40</option>
+                                         <option value="">Todos</option>
+                                    </select>
+                                <label for="">Registros</label>
+                             </div>
+                             <div class="MostRegist">
+                                 <label for="">Filtro:</label>
+                                 <input type="text" placeholder="Iniciar busqueda..">
+                             </div>
+                         </div>
+			         <div class="CuerpoRegEncont">
+			             <h3>Total de registros encontrados</h3>
+			             <table>
+                             <tr>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                                 <th></th>
+                             </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			                 <tr>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+			                 </tr>
+			             </table>
+			         </div>
+			        </div>
+
+			</div>
+
+	</section>
+    <div class="modal">
+        <div class="cuerpoModal">
+               <form action="">
+                    <div class="cabeceraModal">
+                        <div class="imgCabModal ImgSearchModal"><img src="../imagenes/search-in-folder%20(1).png" alt=""></div>
+                        <div class="imgCabModal titModal"><p>Filtro de busqueda</p></div>
+                        <div class="imgCabModal btnCerrModal"><span>&times;</span></div>
+                    </div>
+                    <div class="formularioModal">
+                        <div class="descargaFiltro">
+                            <div class="">
+                                <img src="../imagenes/earth-and-laptop%20(1).png" alt="">
+                                <input type="radio" name="descarga">
+                                <label for="">En linea</label>
+                            </div>
+                            <div class="">
+                                <img src="../imagenes/icon-exell.png" alt="">
+                                <input type="radio" name="descarga">
+                                <label for="">Excel</label>
+                            </div>
+                        </div>
+                        <p>*En linea y excel limitado a 100 registros</p>
+                        <div class="selectFiltro">
+                                <div class="">
+                                    <label for="">Estatus</label>
+                                    <select name="" id="">
+                                        <option value="">Seleccione una opcion</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <label for="">modulo</label>
+                                    <select name="" id="">
+                                        <option value="">Seleccione una opcion</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <label for="">Tipo de solicitud</label>
+                                    <select name="" id="">
+                                        <option value="">Seleccione una opcion</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <label for="">Inicio de rango de fecha</label>
+                                    <input type="date">
+                                </div>
+                                <div class="">
+                                    <label for="">Inicio de rango de fecha</label>
+                                    <input type="date">
+                                </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
