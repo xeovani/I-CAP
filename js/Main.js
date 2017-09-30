@@ -8,12 +8,34 @@ $(document).ready(function(){
 
          $(".titulo-sem > h2").hide().slideDown(1000);
 
-    /*-----------validacion de logeo---------------*/
-
-/*
+    /*-----------limpiar input---------------*/
 
 
-*/
+                        $(".MostRegist >input").focusin(function(){
+
+                            $(this).val(" ");
+                        });
+                        $(".MostRegist >input").focusout(function(){
+
+                            $(this).val("Iniciar busqueda..");
+                        });
+
+                        $(".navegacion >span > input").focusin(function(){
+                            $(this).val(" ");
+                        });
+
+                        $(".navegacion >span > input").focusout(function(){
+                            $(this).val("Buscar . .");
+                        });
+    /*--------------------modal descarga-------------*/
+
+    $(".MostRegist > a").click(function(){
+       $(".modal").css({"display":"block","width":"100%","transition":"width 2s","height":"100%","transition":"height 2s"});
+        return false;
+    });
+    $(".cabeceraModal span").click(function(){
+        $(".modal").css("display","none");
+    });
 
     /*--------------------menu responsivo----------------*/
 
@@ -177,6 +199,10 @@ $(document).ready(function(){
                             $("#Usuario").val(mayusculas);
 
                         });
+
+
+
+
 
 
 });

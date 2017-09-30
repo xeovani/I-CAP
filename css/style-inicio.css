@@ -247,7 +247,7 @@ header{
 
 
 
-    .semaforo .titulo-sem{
+    .titulo-sem{
         height: 60px;
         background: rgba(226,226,226,1);
         background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
@@ -258,7 +258,7 @@ header{
         background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
     }
-    .titulo-sem h2{
+    .titulo-sem > h2{
         font-weight: bold;
         color:#0C426F;
         box-sizing: border-box;
@@ -705,12 +705,165 @@ header{
 .text_cuerpo p{
     margin: 0px auto;
     text-align: justify;
-
 }
 
 .menubar{
     display: none;
 }
+/*-------------BusquedaSolicitud------------*/
+
+.BusqSolicitud{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+}
+
+.tituloBusqueda, .cuerpoBusqueda{
+    width: 90%;
+    margin: auto;
+}
+.tituloBusqueda{
+    border-bottom: 1px solid #BEBEBE;
+}
+.MostRegist{
+    margin: auto;
+    box-sizing: border-box;
+}
+.BusqSolicitud{
+    height: 100px;
+    color: #000000
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+    border-top: 1px solid #BEBEBE;
+}
+
+.MostRegist >a{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #0b3b64;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    box-shadow: -2px 5px 9px #0b3b64;
+}
+.MostRegist >a:hover{
+    background-color: rgb(16, 113, 185);
+    box-shadow: -2px 5px 9px rgb(16, 113, 185);
+}
+.MostRegist >a+label{
+    position: relative;
+    bottom: 10px;
+}
+.tituloBusqueda + div > p{
+    margin-top: 15px !important;
+}
+.MostRegist >input{
+    text-indent: 5px;
+
+}
+.CuerpoRegEncont{
+    height: 380px;
+    border-top: 1px solid #BEBEBE;
+    box-sizing: border-box;
+    background: rgb(226,226,226); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 60%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(254,254,254,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 60%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%,rgba(254,254,254,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+
+}
+.CuerpoRegEncont > h3{
+    box-sizing: border-box;
+    margin: 15px ;
+    color: rgb(16, 113, 185);
+}
+/*----------modal busqueda----------*/
+.modal{
+    display: none;
+    z-index: 2000;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    width: 0%;
+    height: 0%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: auto;
+    padding-top: 200px;
+}
+.cuerpoModal{
+    position: relative;
+    width: 50%;
+    height: 250px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid #ffffff;
+    animation-name: animacionTop;
+    animation-duration: 0.4s;
+    -webkit-animation-name: animacionTop;
+    -webkit- animation-duration: 0.4s;
+/*    box-shadow: 4px 5px 19px; */
+
+}
+.cabeceraModal{
+    display: flex;
+    -webkit- display: flex;
+    justify-content: center;
+    -webkit- justify-content: center;
+    border-bottom: 1px solid #ffffff;
+    box-sizing: border-box;
+    padding: 12px;
+/*    background-color: #0b3b64;*/
+}
+.cabeceraModal span{
+    cursor: pointer;
+}
+.cabeceraModal >div{
+    margin: auto;
+}
+.descargaFiltro{
+    display: flex;
+    -webkit- display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 9px 5px;
+}
+.descargaFiltro >div{
+    margin: auto;
+}
+.formularioModal >p{
+    font-size: 65.5%;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff;
+}
+.selectFiltro{
+    display: flex;
+    -webkit-display:flex;
+}
+.selectFiltro div:nth-child(-n+3){
+
+}
+
+/*----agregando animacion a modal---*/
+@keyframes animacionTop{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+
+}
+-webkit-@keyframes animacionTop{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+
+}
+
 
 /*Diseño reponsivo */
 
@@ -2018,6 +2171,9 @@ header{
         max-width: 62%;
         background-color: #0C426F;
         text-align: center;
+    }
+    .cuerpo{
+        height: 100%;
     }
 
 
