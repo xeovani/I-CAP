@@ -6,8 +6,9 @@ body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	font-family: 'Lato', sans-serif;
     color: #ffffff;
+	font-family: 'Lato', sans-serif;
+
 
 }
 header{
@@ -806,12 +807,12 @@ header{
     box-sizing: border-box;
     margin: auto;
     border: 1px solid #ffffff;
-    animation-name: animacionTop;
-    animation-duration: 0.4s;
     -webkit-animation-name: animacionTop;
     -webkit- animation-duration: 0.4s;
-/*    box-shadow: 4px 5px 19px; */
-
+    animation-name: animacionTop;
+    animation-duration: 0.4s;
+    background-color: #0b3b64;
+    box-shadow: 4px 5px 19px;
 }
 .cabeceraModal{
     display: flex;
@@ -844,13 +845,22 @@ header{
     padding: 5px;
     border-bottom: 1px solid #ffffff;
 }
-.selectFiltro{
-    display: flex;
-    -webkit-display:flex;
-}
-.selectFiltro div:nth-child(-n+3){
+
+.formularioModal > div:nth-child(3) > div{
+    box-sizing: border-box;
+    margin:20px 2%;
 
 }
+.selectFiltro select{
+    width: 200px
+}
+.selectFiltro{
+    display: flex;
+    -webkit- display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 
 /*----agregando animacion a modal---*/
 @keyframes animacionTop{
