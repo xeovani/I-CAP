@@ -119,7 +119,7 @@
 	<section>
 			<div id="cuerpo" class="cuerpo">
                      <div class="tituloBusqueda titulo-sem">
-                             <h2>> Busqueda de Solicitudes</h2>
+                             <h2>> Resumen Bitacora</h2>
                      </div >
                      <div class="infBusqueda tituloBusqueda">
                          <p>Instrucciones:<br>Para iniciar la busqueda por favor dar click en el boton "Filtrar busqueda".</p>
@@ -257,8 +257,9 @@
 			</div>
 
 	</section>
+                    <!--   modal resumen bitacora-->
     <div class="modal">
-        <div class="cuerpoModal">
+        <div class="cuerpoModal modalBitacora">
                <form action="">
                     <div class="cabeceraModal">
                         <div class="imgCabModal ImgSearchModal"><img src="../imagenes/search-in-folder%20(1).png" alt=""></div>
@@ -279,78 +280,16 @@
                             </div>
                         </div>
                         <p>*En linea y excel limitado a 100 registros</p>
-                        <div class="selectFiltro">
-                                <div class="">
-                                    <label for="">Estatus</label>
-                                    <select name="" id="">
-                                        <option value="">Seleccione una opcion</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                                <div class="">
-                                    <label for="">Modulo</label>
-                                    <select name="" id="">
-                                        <option value="">Seleccione una opcion</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                                <div class="">
-                                    <label for="">Tipo de solicitud</label>
-                                    <select name="" id="">
-                                        <option value="">Seleccione una opcion</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="footerModal selectFiltro">
-                                <div class="">
-                                    <label for="">Inicio de rango de fecha</label>
-                                    <input type="date">
-                                </div>
-                                <div class="">
-                                    <label for="">Inicio de rango de fecha</label>
-                                    <input type="date">
-                                </div>
-                            </div>
+                        <div class="filtroFolio">
+                              <div class="">
+                              <label for="">Folio</label><input type="text">
+                              </div>
+                              <div class="">
+                              <input  class=""type="submit" value="Buscar">
+                              </div>
+                        </div>
                     </div>
-                    <div class="">
-                    <input type="submit" value="Buscar">
-                    </div>
+
                 </form>
             </div>
     </div>

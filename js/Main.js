@@ -20,11 +20,11 @@ $(document).ready(function(){
                             $(this).val("Iniciar busqueda..");
                         });
 
-                        $(".navegacion >span > input").focusin(function(){
+                        $(".navegacion >span >input:first-child").focusin(function(){
                             $(this).val(" ");
                         });
 
-                        $(".navegacion >span > input").focusout(function(){
+                        $(".navegacion >span >input:first-child").focusout(function(){
                             $(this).val("Buscar . .");
                         });
     /*--------------------modal descarga-------------*/
