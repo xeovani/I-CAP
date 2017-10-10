@@ -431,7 +431,7 @@ header{
         text-shadow: 0px 4px 6px rgba(16, 113, 185, 9);
 /*        text-shadow: -22px 5px 1px rgba(16, 113, 185, 9);*/
     }
-    .form_solicitud > form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         margin-left: 450px;
         width:30%;
@@ -446,7 +446,7 @@ header{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
     }
-    .form_solicitud form > input:hover{
+    .form_solicitud form > input[type=submit]:hover{
         box-shadow: 0 4px 16px  rgba(16, 113, 185, 1);
         text-shadow: 1px 1px 6px #fff;
         transition: all 0.2s ease;
@@ -981,6 +981,29 @@ header{
     to {top:0; opacity:1}
 
 }
+/*--------------graficos-------------*/
+.formGraficos form div{
+     box-sizing: border-box;
+     margin: 40px auto;
+}
+.formGraficos form div input[type=submit]{
+    border: none;
+    color: #ffffff;
+    width: 180px;
+    height: 26px;
+    font-size: 16px;
+    background: #1e5799;
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 97%, #7db9e8 100%);
+    background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%);
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );}
+
+.formGraficos form div input[type=submit]:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+    text-shadow: 1px 1px 6px #fff;
+    transition: all 0.2s ease;
+}
 
 
 
@@ -1290,9 +1313,10 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         width:90%;
+        margin-left: 0px;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
         background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
@@ -1307,9 +1331,11 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
+/*
     .form_solicitud > form > input{
         margin-left: 0px;
     }
+*/
     /*---------semaforo----------*/
     .titulo-sem{
         height: 40px !important;
@@ -1462,7 +1488,42 @@ header{
         font-size: 12px !important;
         margin: 20px 20% !important;
     }
+    /*--------------graficos-------------*/
 
+    .formGraficos form div{
+         box-sizing: border-box;
+         margin: 10px auto;
+        width: 200px;
+
+    }
+    .formGraficos form div input[type=submit]{
+        border: none;
+        color: #ffffff;
+        width: 180px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .formGraficos form div input[type=submit]:hover{
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+        text-shadow: 1px 1px 6px #fff;
+        transition: all 0.2s ease;
+    }
+    .formGraficos form div label{
+        display: block;
+        font-size: 12px;
+    }
+    .formGraficos form div select{
+        font-size: 12px;
+        width: 180px !inportant;
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        margin-top: 10px;
+    }
+    .formGraficos form div input[type=date]{
+        width: 180px;
+    }
 }
 			        /*-------------------------------entre 481 a 768--------------------------------*/
 
@@ -1734,8 +1795,9 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
+        margin-left: 0px;
         width:90%;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
@@ -1751,9 +1813,7 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
      /*----------tooltip----------*/
     .tooltip{
         position: absolute;
@@ -1891,6 +1951,46 @@ header{
         font-size: 12px !important;
         margin: 20px 20% !important;
     }
+        /*--------------graficos-------------*/
+
+    .formGraficos form div{
+         box-sizing: border-box;
+         margin: 10px auto;
+        width: 200px;
+
+    }
+    .formGraficos form div input[type=submit]{
+        border: none;
+        color: #ffffff;
+        width: 180px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .formGraficos form div input[type=submit]:hover{
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+        text-shadow: 1px 1px 6px #fff;
+        transition: all 0.2s ease;
+    }
+    .formGraficos form div label{
+        box-sizing: border-box;
+        display: block;
+        font-size: 12px;
+        padding: 2px 0px;
+
+    }
+    .formGraficos form div select{
+        font-size: 12px;
+        width: 180px !inportant;
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        margin-top: 10px;
+    }
+    .formGraficos form div input[type=date]{
+        width: 180px;
+    }
+
 
 
 }
@@ -2153,9 +2253,10 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         width:90%;
+        margin-left: 0px;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
         background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
@@ -2170,9 +2271,7 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
      /*----------tooltip----------*/
     .tooltip{
         position: absolute;
@@ -2286,6 +2385,32 @@ header{
         margin: 20px 20% !important;
     }
 
+    /*---------------graficos-----------*/
+    .formGraficos form{
+
+    }
+    .formGraficos form div{
+/*
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+*/
+    }
+
+    .formGraficos form div select{
+/*
+        box-sizing: border-box;
+        margin-top: 10px;
+        font-size: 12px;
+        width: 180px !important;
+*/
+    }
+/*
+    .formGraficos >form >div >label:nth-child(5){
+        display: block;
+    }
+*/
 
 }
 
@@ -2472,8 +2597,9 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud form > input[type=submit]{
         margin-top: 20px;
+        margin-left: 0px;
         width:50%;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
@@ -2483,9 +2609,7 @@ header{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
         /*----------modal--------------------*/
     .cuerpoModal{
         height: 350px;
