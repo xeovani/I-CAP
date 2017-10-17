@@ -37,6 +37,16 @@ $(document).ready(function(){
         $(".modal").css("display","none");
     });
 
+    /*--------------------modal resumen--------------*/
+    var modalResumen= document.getElementsByClassName("llamadaModal");
+
+    modalResumen.onload=$(".modalResumen").css({ width : '100%'});
+
+    $(".headModResumen span").click(function(){
+        $(".modalResumen").css({"width":"0%"})
+
+    });
+
     /*--------------------menu responsivo----------------*/
 
         var contador=1;

@@ -181,11 +181,6 @@ header{
     .semaforo{
     width: 90%;
     margin: auto;
-/*
-    position: relative;
-    top: 30px;
-*/
-
     }
     .busqueda-semaforo{
     height: 100px;
@@ -312,9 +307,6 @@ header{
        color: #ffffff;
        background-color: #0C426F;
        text-decoration: none;
-    }
-    .paginacion ul li a:hover{
-
     }
     .paginacion img{
         position: relative;
@@ -1005,7 +997,97 @@ header{
     transition: all 0.2s ease;
 }
 
+/*------------------modalResumen------------------*/
+.modalResumen{
+/*    display: none;*/
+/*    width: 100%;
+    height: 100vh;*/
+    width: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.cuerpoModResumen{
+    position: relative;
+    width: 25%;
+    height: 470px;
+    margin-top: 220px;
+/*    border: 1px solid #ffffff;*/
+    background: #00426D;
 
+}
+.cuerpoModResumen .headModResumen{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+}
+.cuerpoModResumen .headModResumen *{
+    margin: 10px;
+    box-sizing: border-box;
+
+}
+.tablaModResumen table th{
+    box-sizing: border-box;
+/*    border-top: 1px solid #ffffff;*/
+    padding-top: 12px;
+    width: 100%;
+}
+.headModResumen >span{
+    cursor: pointer;
+}
+.cuerpoModResumen >p{
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+.tablaModResumen{
+    height:83.9%;
+}
+.tablaModResumen table{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: scroll;
+}
+.tablaModResumen table tr >td{
+/*    border-top: 1px solid #ffffff;*/
+    box-sizing: border-box;
+    padding: 15px 5px 0px 7px;
+}
+.tablaModResumen table tr td a{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.tablaModResumen table tr td a:hover{
+    text-decoration: underline;
+}
+.tablaModResumen table tr:not(.titTablaResumen):hover{
+    background: #0070B5;
+    transition: 0.3s;
+}
+.headModResumen span{
+    box-sizing: border-box;
+    width: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.headModResumen span:hover{
+    background-color: #ffffff;
+    border-radius: 1px;
+    cursor: pointer;
+    color: #0b3b64;
+}
 
 /*Diseño reponsivo */
 
@@ -1511,8 +1593,10 @@ header{
         transition: all 0.2s ease;
     }
     .formGraficos form div label{
+        box-sizing: border-box;
         display: block;
         font-size: 12px;
+        padding: 2px;
     }
     .formGraficos form div select{
         font-size: 12px;
@@ -1524,6 +1608,11 @@ header{
     .formGraficos form div input[type=date]{
         width: 180px;
     }
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+        width: 60%;
+    }
+
 }
 			        /*-------------------------------entre 481 a 768--------------------------------*/
 
@@ -1954,15 +2043,15 @@ header{
         /*--------------graficos-------------*/
 
     .formGraficos form div{
-         box-sizing: border-box;
-         margin: 10px auto;
-        width: 200px;
+        box-sizing: border-box;
+        margin: 10px auto;
+        width: 80%;
 
     }
     .formGraficos form div input[type=submit]{
         border: none;
         color: #ffffff;
-        width: 180px;
+        width: 90%;
         height: 26px;
         font-size: 12px;
     }
@@ -1982,15 +2071,18 @@ header{
     }
     .formGraficos form div select{
         font-size: 12px;
-        width: 180px !inportant;
+
     }
     .formGraficos form div:nth-child(2) input[type=submit]{
         margin-top: 10px;
     }
     .formGraficos form div input[type=date]{
-        width: 180px;
+        width: 90%;
     }
-
+        /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+       width: 50%;
+    }
 
 
 }
@@ -2386,31 +2478,27 @@ header{
     }
 
     /*---------------graficos-----------*/
-    .formGraficos form{
-
-    }
-    .formGraficos form div{
-/*
-        box-sizing: border-box;
-        padding: 10px;
-        margin-top: 10px;
-        display: flex;
-*/
-    }
 
     .formGraficos form div select{
-/*
-        box-sizing: border-box;
-        margin-top: 10px;
-        font-size: 12px;
         width: 180px !important;
-*/
     }
-/*
     .formGraficos >form >div >label:nth-child(5){
+        box-sizing: border-box;
+        padding-top: 14px;
         display: block;
     }
-*/
+    .formGraficos form div{
+        width: 100%;
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        width:30%;
+    }
+
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+       width: 35%;
+    }
+
 
 }
 
@@ -2664,6 +2752,27 @@ header{
         margin: 20px 20% !important;
     }
 
+    /*------------graficos-------*/
+    .formGraficos form{
+        display: flex;
+        width: 90%;
+    }
+    .formGraficos form div{
+        width: 100%;
+    }
+    .formGraficos form div{
+        width: 100%;
+        text-align: center;
+    }
+    .formGraficos form div select{
+        width: 180px !important;
+    }
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+        width: 30%;
+    }
+
+
 }
 
 /*-----------------------------------------mayor a 1281---------------------------------*/
@@ -2693,5 +2802,15 @@ header{
     .filtroReportes > div{
         width: 200px;
     }
+    /*------------graficos-----------*/
+    .formGraficos form{
+        display: flex;
+        width: 90%;
+    }
+    .formGraficos form div{
+        height: 80px;
+    }
+
+
 
 }
