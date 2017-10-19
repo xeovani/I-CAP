@@ -1,5 +1,5 @@
 body{
-	background: url("../imagenes/fondo_gratis3.jpg");
+	background: url("../imagenes/fondo_principal.png");
     background-attachment: fixed;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -8,8 +8,6 @@ body{
 	background-size: cover;
     color: #ffffff;
 	font-family: 'Lato', sans-serif;
-
-
 }
 header{
 	width: 100%;
@@ -58,11 +56,14 @@ header{
        text-align: center;
        padding-top: 14px;
     }
+    .datos_usuario p{
+        box-sizing: border-box;
+       margin-bottom: 10px;
+    }
     .datos_usuario input{
         width: 60px;
         background-color:#F58837;
         border: none;
-/*        color: #ffffff;*/
         font-weight: 700;
         text-align: center;
     }
@@ -99,11 +100,6 @@ header{
 	right: 20%;
 	max-width: 62%;
 	height: 100vh;
-/*    background-image: url(../imagenes/bg-body.jpg);*/
-/*
-	background-color: #000000;
-	background-color: rgba(0, 0, 0, 0.9);
-*/
     background-image: url(../imagenes/fondoIV.png);
 
 
@@ -296,11 +292,6 @@ header{
     }
     .paginacion ul li{
        display: inline;
-/*       text-align: center;*/
-/*       margin: 0 1% 0 0;               */
-
-
-
     }
     .paginacion ul li a{
        padding: 6px 7px 5px 7px;
@@ -610,7 +601,6 @@ header{
     padding: 0px;
     position: absolute;
     display: none;
-
 
 }
 
@@ -1095,31 +1085,23 @@ header{
 
 @media(max-width: 480px) {
     body{
-/*
-    background: url("../imagenes/fondo_gratis3.jpg") center center;
-    background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-    height: 100vh;
-    width: 100%;
-*/
-    background: url("../imagenes/fondo_mobil.jpg") !important;
+	background: url("../imagenes/fondo_principalmobil.png") !important;
     background-attachment: fixed !important;
 	background-repeat: no-repeat !important;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	-o-background-size: cover !important;
 	background-size: cover !important;
+
     }
+
 	html{
 		font-size: 62.5%;
 /*        height: 100vh;*/
         width: 100%;
 	}
 	.cabecera{
-		max-height: 65px;
+		max-height: 75px;
         display: -webkit-flex;
         -webkit-justify-content: space-between;
         justify-content:space-between;
@@ -1135,7 +1117,7 @@ header{
        box-sizing: border-box;
        width: 20%;
        height: 35px;
-       margin: 10px 2%;
+       margin: 20px 2%;
 
 	}
 	#logo_icap img{
@@ -1143,7 +1125,8 @@ header{
 
 	}
 	#logo_procesar{
-		margin: 10px 2% 0px 0px;
+        box-sizing: border-box;
+		margin: 17px 2% 0px 0px;
         height: 40px;
         max-width: 20%;
 	}
@@ -1158,15 +1141,19 @@ header{
         padding-top: 2%;
 
     }
+    .datos_usuario p{
+        margin-bottom: 0px;
+    }
     .datos_usuario input{
-        width: 30%;
+        display: block;
         background-color:#F58837;
+        box-sizing: border-box;
         border: none;
         font-size: 10px;
+        width: 50px;
+        margin: 5px auto;
     }
-    .datos_usuario br{
-        display: none;
-    }
+
 
     .input_login{
         margin-top: 9px;
@@ -1247,7 +1234,7 @@ header{
     .navegacion nav{
         width: 80%;
         position: absolute;
-        top: 167px;
+        top: 177px;
 /*        overflow: scroll;*/
         height: calc(80%);
         z-index: 1000;
@@ -1618,17 +1605,16 @@ header{
 
 
 @media(min-width: 481px) and (max-width: 767px){
-/*
        body{
-    background: url("../imagenes/fondo_mobil.jpg") center center fixed;
-    background-repeat: no-repeat;
+	background: url("../imagenes/fondo_principal-768.png");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 
     }
-*/
     body{
 		font-size: 93%;
 	}
@@ -1668,8 +1654,8 @@ header{
        background-color: rgb(16,113,185);
 
     }
-    .datos_usuario br{
-        display: none;
+    .datos_usuario p{
+        margin-bottom: 0px;
     }
     .datos_usuario input{
         width: 55px;
@@ -1752,8 +1738,8 @@ header{
 
     .navegacion nav{
         width: 45%;
-        position: fixed;
-        top: 182px;
+        position: absolute !important;
+        top: 182px !important;
         height: calc(100%);
         z-index: 1000;
         left: -100%;
@@ -2090,7 +2076,7 @@ header{
 
 @media (min-width: 768px) and (max-width:1024px){
     body{
-		font-size: 93%;
+        font-size: 93%
 	}
 	.cabecera{
 		max-height: 80px;
@@ -2132,7 +2118,7 @@ header{
         display: none;
     }
     .datos_usuario input{
-        width: 55px;
+        width: 65px;
         background-color:#F58837;
         border: none;
     }
@@ -2212,7 +2198,7 @@ header{
 
     .navegacion nav{
         width: 40%;
-        position: fixed;
+        position: absolute !important;
         top: 182px;
         height: calc(100%);
         z-index: 1000;
@@ -2534,14 +2520,17 @@ header{
 
     .datos_usuario{
        box-sizing: border-box;
-/*       max-width: 300px;*/
        margin: auto;
        padding: 1% 10%;
-/*       background-color: rgb(12,66,111);*/
-    background-color: rgb(16,113,185);
+       background-color: rgb(16,113,185);
+    }
+    .datos_usuario p{
+        font-size: 14px;
+        box-sizing: border-box;
+
     }
     .datos_usuario input{
-        width: 55px;
+        width: 65px;
         background-color:#F58837;
         border: none;
     }
@@ -2793,6 +2782,7 @@ header{
      .cuerpMdalReport{
          width: 50%;
     }
+
     .filtroReportes{
         display: flex;
         -webkit-display:flex;

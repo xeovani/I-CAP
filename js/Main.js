@@ -87,94 +87,10 @@ $(document).ready(function(){
 
 	     });
 
-          /* var submenu = document.querySelectorAll(".navegacion nav > ul > li >.submenu")*/
-
-         /*  for(var i=0;i<=submenu.length;i++){
-
-      /* $(".hover").hover(function(){
-
-                       /* $(".navegacion nav ul li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});
-                          $(".over").show(500).css({"display" : "flex", "z-index" : "1"});
-                        },
-
-                        function(){
-                         $(".over").hide(500).css({"padding" : "0", "display" : "none",
-                                                                              "position" : " absolute "
-                                                                              });
-
-                       /* $(".navegacion nav ul li .submenu").hide(500).css({"padding" : "0", "position" : " absolute ",
-                                                                           "display" : "none"});
-
-        });
-
-              }   */
 
 
 
-
-
-
-
-
-
-
-
-            /*-----------------Menu------------------------*/
-//
-//     var menu = document.querySelectorAll(".navegacion nav > ul > li");
-//     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
-//    console.log("menu: " + menu.length);
-//
-//    console.log("submenu: " + submenu.length);
-//      for(var i=0;i<=6;i++){
-//
-//
-//
-//                menu[i].onmouseover=
-//                    function(){
-//
-//                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
-//
-//                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
-//
-//
-//
-//
-//
-//
-//                    }
-//
-//
-//                menu[i].onmouseout=function(){
-//
-//                    $(this).css("background-color" , "#0C426F");
-//
-//
-//
-//                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
-//                                                                       "position" : "absolute",
-//                                                                       "display"  : "none"});   */
-//
-//
-//                    }
-//
-//           }
-            /*-----------------------------over de semaforo--------------------------*/
-
-/*             $(".contenedor-tabla table tr").hover(
-                        function(){
-                            $(this).css("background-color","#0C426F");
-                        },
-
-                        function(){
-                            $(this).css("background-color","rgba(16,113,185,0.1)");
-
-
-                        });*/
-
-
-
-
+    /*---------------------------semaforo------------------*/
 
                 var semaforo= document.querySelectorAll(".contenedor-tabla table tr");
 
@@ -233,27 +149,53 @@ $(document).ready(function(){
                         var tiempo = 0;
 
                         function contadorTiempo() {
-                            document.getElementById("Tiempo-sesion").value = horas + ":" + minutos + ":" + segundos;
-                            segundos = segundos + 1;
-                            t = setTimeout(function(){ contadorTiempo() }, 1000);
-                            if(segundos==59){
-                                segundos=0;
-                                minutos= minutos + 1;
 
-                                    if(minutos==59)
-                                        {
-                                            minutos=0;
-                                            horas = horas + 1;
-                                        }
+                            var cero="0";
+                            var seg,min,hrs;
+
+                            if(segundos<10){
+                                seg= cero + segundos;
+                             }
+                            else{
+                                seg=segundos;
                             }
+                            if(minutos<10){
+                                min= cero + minutos;
+                            }
+                            else{
+                                min= minutos;
+                            }
+                            if(horas<10){
+                                hrs= cero + horas;
+                            }
+                            else{
+                                hrs=horas;
+                            }
+                        document.getElementById("Tiempo-sesion").value = hrs + ":" + min + ":"  + seg;
+
+
+
+                                segundos = segundos + 1;
+                                t = setTimeout(function(){ contadorTiempo() }, 1000);
+                                if(segundos==59){
+                                    segundos=0;
+                                    minutos= minutos + 1;
+
+                                        if(minutos==59)
+                                            {
+                                                minutos=0;
+                                                horas = horas + 1;
+                                            }
+                                }
+                            }
+
+                            function iniciarConteo() {
+                                if (!tiempo) {
+                                    tiempo = 1;
+                                    contadorTiempo();
+                                }
                         }
 
-                        function iniciarConteo() {
-                            if (!tiempo) {
-                                tiempo = 1;
-                                contadorTiempo();
-                            }
-                        }
 
                         window.onload=iniciarConteo;
 
