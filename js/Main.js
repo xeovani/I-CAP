@@ -87,7 +87,21 @@ $(document).ready(function(){
 
 	     });
 
+    /*------------------Modal cerrar sesion----------------*/
 
+                $(".btnCerrarSesion").click(function(){
+                        $(".modalCerrarSesion").css({display:"block"});
+                  return false;
+                });
+
+                $(".headCerrarSesion span").click(function(){
+                    $(".modalCerrarSesion").css({"display":"none"});
+                });
+
+                $(".seccionCerrarSesion input:gt(0)").click(function(){
+
+                    $(".modalCerrarSesion").css({"display":"none"});
+                });
 
 
     /*---------------------------semaforo------------------*/
@@ -97,16 +111,14 @@ $(document).ready(function(){
                     console.log(semaforo);
                     for(var i=1;i<=semaforo.length;i++){
 
-                                        semaforo[i].onmouseover=
-                                            function(){//
+                                        semaforo[i].onmouseover=function(){
                                                 $(this).css({"background":"#0C426F","cursor":"pointer"}).on("click",function(){
-                                                                                        $(this).css("background-color", "yellow");//cambiar la funcion para                                              //  que dirija a donde debe
+                                                                                        $(this).css("background-color", "yellow");
                                                                                         });
 
                                             }
 
-                                        semaforo[i].onmouseout=
-                                            function(){
+                                        semaforo[i].onmouseout=function(){
                                                 $(this).css("background","rgba(16,113,185,0.1)");
                                             }
 
@@ -116,17 +128,6 @@ $(document).ready(function(){
 
 
 
-                       $(".login_user form").validationEngine();
-
-                        var usr=$("#Usuario").val();
-
-                        $("#btn-enviar").click(function(){
-                            var mayusculas= $("#Usuario").val().toUpperCase();
-                            $("#Usuario").val(mayusculas);
-
-                        });
-
-
 
 
 
@@ -134,11 +135,7 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-                /*-----------------------------------duracion de sesion--------------*/
+                      /*-----------------------------------duracion de sesion--------------*/
 
 
 
@@ -187,6 +184,17 @@ $(document).ready(function(){
                                                 horas = horas + 1;
                                             }
                                 }
+
+                            if(typeof(Storage) !== "undefined"){
+                            localStorage.hours=hrs;
+                            localStorage.minutes=min;
+                            localStorage.seconds=seg;
+
+                            }else{
+                               alert("Sorry! No Web Storage support.." )
+                            }
+
+
                             }
 
                             function iniciarConteo() {
@@ -194,12 +202,9 @@ $(document).ready(function(){
                                     tiempo = 1;
                                     contadorTiempo();
                                 }
-                        }
+                            }
 
-
-                        window.onload=iniciarConteo;
-
-
+                    window.onload=iniciarConteo;
 
 
 
