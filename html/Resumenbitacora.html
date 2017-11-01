@@ -10,11 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/style-inicio.css" MEDIA=screen>
 	<link rel="stylesheet" type="text/css" href="../css/fontello.css" MEDIA=screen>
 	<link rel="shorcut icon" href="../imagenes/ike.ico">
-	<script src="../js/css3-mediaqueries.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="../js/Main.js"></script>
+
 </head>
-<body>
+<body onbeforeunload = "sesion()">
 	<header>
 		<div class="cabecera">
 			<div id="logo_icap">
@@ -22,7 +20,7 @@
 			</div>
 			<div class="datos_usuario" i>
                 <p>XEOVANI JUAREZ PEÑALOZA</p>
-			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion"></label>
+			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion1"></label>
             </div>
 			<div id="logo_procesar">
 				<img src="../imagenes/logo-procesar.png" alt="imagen no encontrada">
@@ -42,7 +40,7 @@
        <nav>
             <ul>
                 <li>
-                    <a href="#" style="padding:18px 30px 20px"><img src="../imagenes/home (2).png" alt="imagen no encontrada"></a>
+                    <a href="../html/inicio.html" style="padding:18px 30px 20px"><img src="../imagenes/home (2).png" alt="imagen no encontrada"></a>
 
                 </li>
                 <li class="hover">
@@ -52,8 +50,8 @@
                         <div class="submenu-item">
                             <ul>
                                 <li><span class="icon-up-dir"></span></li>
-                                <li><a href="#">Nuevo</a></li>
-                                <li><a href="#">Busqueda</a></li>
+                                <li><a href="../html/solicitud.html">Nuevo</a></li>
+                                <li><a href="../html/busquedaSolicitud.html">Busqueda</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,8 +62,8 @@
                         <div class="submenu-item">
                             <ul>
                                 <li><span class="icon-up-dir"></span></li>
-                                <li><a href="#">Resumen bitacora</a></li>
-                                <li><a href="#">Reporte</a></li>
+                                <li><a href="../html/Resumenbitacora.html">Resumen bitacora</a></li>
+                                <li><a href="../html/Reportes.html">Reporte</a></li>
                             </ul>
                         </div>
                     </div>
@@ -76,8 +74,8 @@
                         <div class="submenu-item">
                             <ul>
                                 <li><span class="icon-up-dir"></span></li>
-                                <li><a href="#">Resumen</a></li>
-                                <li><a href="#">Grafica</a></li>
+                                <li><a href="../html/ResumenResumen.html">Resumen</a></li>
+                                <li><a href="../html/Graficas.html">Grafica</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,7 +103,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">Cerrar Sesión</a>
+                    <a href="" class="btnCerrarSesion">Cerrar Sesión</a>
                 </li>
 
             </ul>
@@ -293,11 +291,32 @@
                 </form>
             </div>
     </div>
+   <!---------------------------------------Modal Cerrar sesion---------------------------->
+
+    <div class="modalCerrarSesion animate">
+        <div class="cuerpoCerrarSesion">
+            <div class="headCerrarSesion">
+                <p>¿Desea cerrar sesi&oacute;n?</p>
+                <span>&times;</span>
+            </div>
+            <div class="imgMdlSesion">
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <form action="../html/index.html">
+                <div class="seccionCerrarSesion">
+                    <input type="submit" value="Si" id="btn-cerr-session">
+                    <input type="button" value="No">
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 
-
-
+	<script src="../js/css3-mediaqueries.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/Main.js"></script>
 
 </body>
 </html>

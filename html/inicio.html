@@ -10,15 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/style-inicio.css" MEDIA=screen>
 	<link rel="stylesheet" type="text/css" href="../css/fontello.css" MEDIA=screen>
 	<link rel="shorcut icon" href="../imagenes/ike.ico">
-	<script src="../js/css3-mediaqueries.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="../js/Main.js"></script>
-	        <!--	            Plugin de validacion de formulario-->
-    <script src="../js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
-    <script src="../js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
-    <link rel="stylesheet" href="../js/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
+
+
 </head>
-<body>
+<body onbeforeunload="sesion()">
 	<header>
 		<div class="cabecera">
 			<div id="logo_icap">
@@ -26,7 +21,7 @@
 			</div>
 			<div class="datos_usuario">
                 <p>XEOVANI JUAREZ PEÑALOZA</p>
-			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion"></label>
+			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion1"></label>
             </div>
 			<div id="logo_procesar">
 				<img src="../imagenes/logo-procesar.png" alt="imagen no encontrada">
@@ -299,7 +294,7 @@
             </div>
             <form action="../html/index.html">
                 <div class="seccionCerrarSesion">
-                    <input type="submit" value="Si">
+                    <input type="submit" value="Si" id="btn-cerr-session">
                     <input type="button" value="No">
                 </div>
             </form>
@@ -308,7 +303,9 @@
 
 
 
-
+	<script src="../js/css3-mediaqueries.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/Main.js"></script>
 
 
 </body>

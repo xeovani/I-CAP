@@ -139,11 +139,12 @@ $(document).ready(function(){
 
 
 
-                        var segundos = 0;
-                        var minutos = 0;
-                        var horas = 0;
+                        var segundos;
+                        var minutos;
+                        var horas;
                         var t;
                         var tiempo = 0;
+                        var time;
 
                         function contadorTiempo() {
 
@@ -152,6 +153,7 @@ $(document).ready(function(){
 
                             if(segundos<10){
                                 seg= cero + segundos;
+
                              }
                             else{
                                 seg=segundos;
@@ -168,12 +170,14 @@ $(document).ready(function(){
                             else{
                                 hrs=horas;
                             }
-                        document.getElementById("Tiempo-sesion").value = hrs + ":" + min + ":"  + seg;
+                             document.getElementById("Tiempo-sesion1").value = hrs + ":" + min + ":"  + seg;
+                              time=document.getElementById("Tiempo-sesion1").value;
+
 
 
 
                                 segundos = segundos + 1;
-                                t = setTimeout(function(){ contadorTiempo() }, 1000);
+                                setTimeout(function(){ contadorTiempo() }, 1000);
                                 if(segundos==59){
                                     segundos=0;
                                     minutos= minutos + 1;
@@ -183,33 +187,64 @@ $(document).ready(function(){
                                                 minutos=0;
                                                 horas = horas + 1;
                                             }
+
                                 }
 
-                            if(typeof(Storage) !== "undefined"){
-                            localStorage.hours=hrs;
-                            localStorage.minutes=min;
-                            localStorage.seconds=seg;
-
-                            }else{
-                               alert("Sorry! No Web Storage support.." )
-                            }
 
 
                             }
 
-                            function iniciarConteo() {
-                                if (!tiempo) {
+                    /*-----------funcion iniciar conteo-------------*/
+                        function iniciarConteo() {
+                            reloj();
+                            if (!tiempo) {
                                     tiempo = 1;
                                     contadorTiempo();
                                 }
+
+
                             }
 
-                    window.onload=iniciarConteo;
+//                    document.getElementById("btn-enviar").onclick=iniciarConteo();
+
+        window.onload=iniciarConteo;
+//                  window.onbeforeunload = funcion();
+
+            function reloj(){
+
+                    if (typeof(Storage) !== "undefined") {
+
+                            if(
+                                localStorage.getItem("segundos") !== "undefined" &&
+                                localStorage.getItem("minutos") !== "undefined" &&
+                                localStorage.getItem("horas") !== "undefined" ){
+                                segundos = parseInt(localStorage.getItem("segundos"));
+                                minutos = parseInt(localStorage.getItem("minutos"));
+                                horas = parseInt(localStorage.getItem("horas"));
+                                console.log("entro");
+                            }else{
+                                segundos = 0;
+                                minutos = 0;
+                                horas = 0;
+
+
+                            }
 
 
 
+                        } else {
+                            document.getElementById("Tiempo-sesion1").innerHTML= "Sorry";
+                        }
+            }
 
-
+            function sesion(){
+                localStorage.setItem("segundos",segundos);
+                localStorage.setItem("minutos",minutos);
+                localStorage.setItem("horas",horas);
+                console.log(localStorage.getItem("segundos"));
+                    console.log(localStorage.getItem("minutos"));
+                        console.log(localStorage.getItem("horas"));
+            }
 
 
 
