@@ -197,30 +197,33 @@ $(document).ready(function(){
                     /*-----------funcion iniciar conteo-------------*/
                         function iniciarConteo() {
                             reloj();
+
                             if (!tiempo) {
                                     tiempo = 1;
                                     contadorTiempo();
                                 }
-
-
+                            SessionClear();
                             }
 
 //                    document.getElementById("btn-enviar").onclick=iniciarConteo();
 
         window.onload=iniciarConteo;
-//                  window.onbeforeunload = funcion();
+
 
             function reloj(){
 
                     if (typeof(Storage) !== "undefined") {
 
                             if(
-                                localStorage.getItem("segundos") !== "undefined" &&
-                                localStorage.getItem("minutos") !== "undefined" &&
-                                localStorage.getItem("horas") !== "undefined" ){
-                                segundos = parseInt(localStorage.getItem("segundos"));
-                                minutos = parseInt(localStorage.getItem("minutos"));
-                                horas = parseInt(localStorage.getItem("horas"));
+                    (sessionStorage.getItem("segundos") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("segundos"))) ) &&
+                    (sessionStorage.getItem("minutos") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("minutos"))))) &&
+
+                    (sessionStorage.getItem("horas") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("horas")))))
+                        ))
+                            {
+                                segundos = parseInt(sessionStorage.getItem("segundos"));
+                                minutos = parseInt(sessionStorage.getItem("minutos"));
+                                horas = parseInt(sessionStorage.getItem("horas"));
                                 console.log("entro");
                             }else{
                                 segundos = 0;
@@ -238,16 +241,42 @@ $(document).ready(function(){
             }
 
             function sesion(){
-                localStorage.setItem("segundos",segundos);
-                localStorage.setItem("minutos",minutos);
-                localStorage.setItem("horas",horas);
-                console.log(localStorage.getItem("segundos"));
-                    console.log(localStorage.getItem("minutos"));
-                        console.log(localStorage.getItem("horas"));
+
+                sessionStorage.setItem("segundos",segundos);
+                sessionStorage.setItem("minutos",minutos);
+                sessionStorage.setItem("horas",horas);
+                console.log(sessionStorage.getItem("segundos"));
+                console.log(sessionStorage.getItem("minutos"));
+                console.log(sessionStorage.getItem("horas"));
+
+                  SessionClear();
+
+
             }
 
 
 
 
 
+
+                    function SessionClear(){
+
+                         document.getElementById('btn-cerr-session').addEventListener('click', function(){
+                                                                    var segd= sessionStorage.getItem(segundos);
+                                                                    var mint= sessionStorage.getItem(minutos);
+                                                                    var hrs= sessionStorage.getItem(horas);
+                                                                    segundos=0;
+                                                                    minutos=0;
+                                                                    horas=0;
+                                                                    sessionStorage.setItem("segd", segundos);                     sessionStorage.setItem("mint", minutos);
+                                                                    sessionStorage.setItem("hrs", horas);
+
+
+                                                                    });
+
+                    }
+
+
+
+//        $(segundos).clear(" ");
 

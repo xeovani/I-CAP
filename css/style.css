@@ -40,8 +40,7 @@ hr{
 #logo_icap{
 	max-width: 120px;
 	float: left;
-	margin: 20px 0 0 307px;
-
+	margin: 20px 0 0 20%;
 }
 
 #logo_icap img{
@@ -49,12 +48,13 @@ hr{
 }
 #logo_procesar{
 	float: right;
-	margin: 40px 325px 0 0px;
+	margin: 40px 15% 0 0px;
+    height: 45px;
 }
 
 #logo_procesar img{
 	max-width: 150px;
-	height: 30px;
+	height: 100%;
 }
 #linea_inf_header{
 
@@ -63,9 +63,10 @@ hr{
 	background-color: #1071B9;
 }
 #btn-enviar{
-	min-height: 43px;
-	min-width: 20%;
-
+    box-sizing: border-box;
+	min-height: 40px;
+	width: 30%;
+    margin-top: 5px;
 }
 .cabecera img:hover{
 	-ms-transform: rotate(360deg);
@@ -73,11 +74,13 @@ hr{
 	-webkit-transition:1.5s;
 }
 .input_login{
-	max-width: 20%;
-	min-height: 38px;
+    box-sizing: border-box;
+	width: 34%;
+	min-height: 40px;
 	border-style: solid;
 	border-width: 1px;
 	background-color: transparent;
+    text-align: center;
 
 
 }
@@ -90,7 +93,6 @@ hr{
 	max-width: 62%;
 	height: 900px;
 	background-color: #000000;
-	/*z-index: 1;*/
 	padding-top: 43px;
 	background-color: rgba(0, 0, 0, 0.8);
 }
@@ -106,10 +108,6 @@ hr{
 	max-width: 77.2%;
     height: 312px;
     margin: 45px auto 0px;
-	/*position: relative;
-	top: 45px;
-	left: 12.5%;*/
-
 }
 .cont_img_tecl img{
 	width: 100%;
@@ -127,10 +125,7 @@ hr{
 	background-repeat: no-repeat;
 
 }
-.input_login {
-	padding-left: 15%;
 
-}
 .text_cuerpo{
     margin: 50px 12.5%;
 }
@@ -166,8 +161,7 @@ hr{
     background-color: #0C426F;
     border-bottom: 1px solid rgba(16, 113, 185, 0.6);
 }
-/* background-color: #0C426F;
-    border-bottom: 1px solid #317EB5; */
+
 .navegacion nav{
     position: relative;
 	top: 0px;
@@ -220,7 +214,6 @@ hr{
     /*filter:alpha(opacity=50); opacity:0.9;*/
     border: none;
     height: 30px;
-    /*text-align: center;    */
     font-weight: bold;
 
 }
@@ -238,8 +231,6 @@ hr{
 
 }
 .navegacion nav ul li .submenu{
-   /* --background-color: #1071B9;
-    background-color: rgba(16, 113, 185, 0.7); -- */
     padding: 0px;
     position: absolute;
     display: none;
@@ -361,8 +352,9 @@ hr{
     }
 
 	#logo_icap{
-		margin: 10px 0 0 30px;
-		width: 50px;
+        width: 50px;
+        margin: 10px 10%;
+        box-sizing: border-box;
 
 	}
 	#logo_icap img{
@@ -370,16 +362,18 @@ hr{
 
 	}
 	#logo_procesar{
-		margin: 10px 50px 0 0;
-		max-width: 80px;
+		margin: 15px 10%;
+		width: 80px;
+        height: 25px
 	}
 	#logo_procesar img{
 		max-width: 100%;
 	}
     .input_login{
+        box-sizing: border-box;
         margin-top: 9px;
 	    display: block;
-        min-width: 80%;
+        width: 95% !important;
         font-size: 12px;
         text-align: center;
 
@@ -443,15 +437,20 @@ hr{
 		max-height: 80px;
 	}
 	#logo_icap{
-		margin: 20px 0 0 120px;
+/*		margin: 20px 0 0 120px;*/
 		max-width: 50px;
+        margin: 17px 0  23px 15%;
+        height: 50px;
+        width: 50px;
 	}
 	#logo_icap img{
-		max-width: 100%;
+		width: 100%;
+        height: 100%;
 	}
 	#logo_procesar{
-		margin: 20px 70px 0 0;
+		margin: 20px 15% 0 0;
 		max-width: 90px;
+        height: 40px;
 	}
 	#logo_procesar img{
 		max-width: 100%;
@@ -493,6 +492,10 @@ hr{
         text-align: justify;
 
     }
+    .input_login{
+        box-sizing: border-box;
+        width: 98.5%;
+    }
 
 
 
@@ -504,16 +507,17 @@ hr{
 		max-height: 90px;
 	}
 	#logo_icap{
-		margin: 25px 0 0 150px;
-		max-width: 60px;
+		margin: 25px 0 0 15%;
+		width: 70px;
 	}
 	#logo_icap img{
-		max-width: 100%;
+		width: 100%;
 
 	}
 	#logo_procesar{
-		margin: 25px 220px 0 0;
-		max-width: 90px;
+		margin: 30px 10% 0 0;
+		width: 15%;
+        height: 40px;
 	}
 	#logo_procesar img{
 		max-width: 100%;
@@ -546,8 +550,15 @@ hr{
 
     }
 
-
-
+    .input_login{
+        box-sizing: border-box;
+        display: inline !important;
+        width: 49%;
+    }
+    #btn-enviar{
+        box-sizing: border-box;
+        width:99%;
+    }
 }
 
 			/*----------------------entre 1025 y 1280------------------------*/
@@ -558,8 +569,8 @@ hr{
 	}
 
 	#logo_icap{
-		margin: 20px 0 0 150px;
-		max-width: 80px;
+		margin: 20px 0 0 15%;
+		width: 100px;
 	}
 	#logo_icap img{
 		max-width: 100%;
@@ -567,11 +578,13 @@ hr{
 
 
 	#logo_procesar{
-		margin: 25px 100px 0 0;
-		max-width: 90px;
+		margin: 35px 100px 0 0;
+		width: 120px;
+        height: 40px !important;
 	}
 	#logo_procesar img{
 		max-width: 100%;
+        height:100%
 	}
     .cuerpo h4{
         margin: 0px auto;
@@ -583,13 +596,19 @@ hr{
 
     }
     .login_user form > input{
-
-        min-width: 23.5%;
         font-size: 12px;
         text-align: center;
 
     }
-
+    .input_login{
+        box-sizing: border-box;
+        width: 49%;
+    }
+    #btn-enviar{
+        box-sizing: border-box;
+        margin-top: 5px;
+        width:99%;
+    }
 
 }
 
