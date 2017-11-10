@@ -11,22 +11,25 @@ $(document).ready(function(){
     /*-----------limpiar input---------------*/
 
 
-                        $(".MostRegist >input").focusin(function(){
+         $(".MostRegist >input").focusin(function(){
 
-                            $(this).val(" ");
-                        });
-                        $(".MostRegist >input").focusout(function(){
+                $(this).val(" ");
+            });
+         $(".MostRegist >input").focusout(function(){
 
-                            $(this).val("Iniciar busqueda..");
-                        });
+                $(this).val("Iniciar busqueda..");
+            });
 
-                        $(".navegacion >span >input:first-child").focusin(function(){
-                            $(this).val(" ");
-                        });
+         $(".navegacion >span >input:first-child").focusin(function(){
+                $(this).val(" ");
+         });
 
-                        $(".navegacion >span >input:first-child").focusout(function(){
-                            $(this).val("Buscar . .");
-                        });
+         $(".navegacion >span >input:first-child").focusout(function(){
+                $(this).val("Buscar . .");
+         });
+
+
+
     /*--------------------modal descarga-------------*/
 
     $(".MostRegist > a").click(function(){
@@ -65,14 +68,6 @@ $(document).ready(function(){
             return false;
         });
 
-/*
-
-                $(".navegacion nav ~ span >input:first-child").focusin(function(){
-
-                    $(this).val(" ");
-
-                });
-*/
 
 
     /*------------------Efecto parallax-------------------*/
@@ -106,6 +101,7 @@ $(document).ready(function(){
 
     /*---------------------------semaforo------------------*/
 
+/*
                 var semaforo= document.querySelectorAll(".contenedor-tabla table tr");
 
                     console.log(semaforo);
@@ -124,6 +120,7 @@ $(document).ready(function(){
 
 
                     }
+*/
 
 
 
@@ -205,7 +202,6 @@ $(document).ready(function(){
                             SessionClear();
                             }
 
-//                    document.getElementById("btn-enviar").onclick=iniciarConteo();
 
         window.onload=iniciarConteo;
 
@@ -215,10 +211,10 @@ $(document).ready(function(){
                     if (typeof(Storage) !== "undefined") {
 
                             if(
-                    (sessionStorage.getItem("segundos") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("segundos"))) ) &&
-                    (sessionStorage.getItem("minutos") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("minutos"))))) &&
+                    (!(isNaN(parseInt(sessionStorage.getItem("segundos"))) ) &&
+                    (!(isNaN(parseInt(sessionStorage.getItem("minutos"))))) &&
 
-                    (sessionStorage.getItem("horas") !== "undefined" && !(isNaN(parseInt(sessionStorage.getItem("horas")))))
+                    (!(isNaN(parseInt(sessionStorage.getItem("horas")))))
                         ))
                             {
                                 segundos = parseInt(sessionStorage.getItem("segundos"));
@@ -278,5 +274,21 @@ $(document).ready(function(){
 
 
 
-//        $(segundos).clear(" ");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
