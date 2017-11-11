@@ -134,6 +134,8 @@ header{
         box-sizing: border-box;
         padding: 10px 10px;
         background-color: rgba(16, 113, 185, 1);
+        display: inline-block;
+        position: relative;
 
     }
     .CRUD_user > ul > li:nth-child(2){
@@ -144,8 +146,6 @@ header{
 
     .tooltip{
         position: absolute;
-        top: 10px;
-        padding: 1%;
         opacity: 0;
         border-radius: 2px;
         z-index: 1;
@@ -153,6 +153,7 @@ header{
         font-size: 12px;
         background-color: #1071b9;
         transition: opacity 1s;
+        box-sizing: border-box;
     }
 
     .CRUD_user > ul > li:hover{
@@ -163,15 +164,28 @@ header{
         opacity: 1;
     }
     .CRUD_user > ul > li:last-child > span{
-        top:4px;
-        margin-left: -145px !important;
-
+       top: 6px;
+       right: 50px;
+       width: 120px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 7px;
     }
     .CRUD_user > ul > li:first-child > span{
-        margin-left: -125px;
+       top: 6px;
+       right: 50px;
+       width: 107px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 7px;
     }
     .CRUD_user > ul > li:nth-child(2) > span{
-        margin-left: 45px;
+       top: 6px;
+       left: 50px;
+       width: 120px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 10px;
     }
     /*----------cuerpo de semaforo---------------*/
     .semaforo{
@@ -695,10 +709,24 @@ header{
 /*-------------BusquedaSolicitud------------*/
 
 .BusqSolicitud{
+    height: 100px;
+/*    color: #000000*/
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+    border-top: 1px solid #BEBEBE;
     display: flex;
     display: -webkit-flex;
+/*
     justify-content: space-between;
     -webkit-justify-content: space-between;
+*/
+
 
 }
 
@@ -713,19 +741,6 @@ header{
     margin: auto;
     box-sizing: border-box;
 }
-.BusqSolicitud{
-    height: 100px;
-    color: #000000
-    background: rgba(226,226,226,1);
-    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
-    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
-    border-top: 1px solid #BEBEBE;
-}
 
 .MostRegist >a{
     box-sizing: border-box;
@@ -735,13 +750,13 @@ header{
     padding: 5px 8px;
     border-radius: 3px;
     box-shadow: -2px 5px 9px #0b3b64;
-/*    transition: 1s;*/
+
 }
 .MostRegist >a:hover{
     background-color: rgb(16, 113, 185);
     box-shadow: -2px 5px 9px rgb(16, 113, 185);
 }
-.MostRegist >a+label{
+.MostRegist > a + label{
     position: relative;
     bottom: 10px;
 }
@@ -857,7 +872,7 @@ header{
 .descargaFiltro{
     display: flex;
     -webkit- display: flex;
-    justify-content: center;
+/*    justify-content: center;*/
     box-sizing: border-box;
     padding: 9px 5px;
 }
@@ -893,6 +908,7 @@ header{
     width: 180px;
     height: 26px;
     font-size: 16px;
+    margin: 20px 20px;
     background: rgba(73,155,234,1);
     background: -moz-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 39%, rgba(32,124,229,1) 63%, rgba(32,124,229,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(39%, rgba(73,155,234,1)), color-stop(63%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
@@ -924,13 +940,16 @@ header{
     margin-left: 40px;
 }
 .formularioModal + div{
+    box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
-    box-sizing: border-box;
+    height: 80px;
 }
+/*
 .formularioModal + div input[type=submit]{
     margin: 5%;
 }
+*/
 /*------modalBitacora---------*/
 
 
@@ -1451,12 +1470,44 @@ header{
     .CRUD_user > ul > li{
         box-sizing: border-box;
         padding: 10px 10px;
-
+        display: inline-block;
 
     }
     .CRUD_user > ul > li:nth-child(2){
         margin-right: auto;
     }
+
+/*--------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
+    }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 51px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+
+
+/*--------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -1528,15 +1579,8 @@ header{
         background-color: #0C426F;
         transition: opacity 1s;
     }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        left: 180px;
-    }
 
-
-
-
-        /*--------------piquito del tooltip-----------*/
+    /*--------------piquito del tooltip-----------*/
     .CRUD_user > ul > li:last-child > span::after{
         content: "";
         position: absolute;
@@ -1937,9 +1981,37 @@ header{
 /*        margin: 10px;*/
 
     }
-    .CRUD_user > ul > li:nth-child(2){
-        margin-right: auto;
+/*-----------------------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
     }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 50px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+
+
+/*-----------------------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -1993,10 +2065,6 @@ header{
         font-size: 12px;
         background-color: #0C426F;
         transition: opacity 1s;
-    }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        margin-left: 45px;
     }
 
 
@@ -2383,7 +2451,7 @@ header{
     }
 
 /*-------------CRUD-USER----------*/
-        .CRUD_user{
+   .CRUD_user{
     box-sizing: border-box;
     position: relative;
     border: none;
@@ -2408,9 +2476,35 @@ header{
 
 
     }
-    .CRUD_user > ul > li:nth-child(2){
-        margin-right: auto;
+/*----------------------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
     }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 51px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+/*-------------------------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -2464,10 +2558,6 @@ header{
         font-size: 12px;
         background-color: #0C426F;
         transition: opacity 1s;
-    }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        margin-left: 45px;
     }
 
 
