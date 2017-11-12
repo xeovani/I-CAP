@@ -18,7 +18,7 @@
 			<div id="logo_icap">
 				<img src="../imagenes/logo_icap.png" alt="imagen no encontrada">
 			</div>
-			<div class="datos_usuario">
+			<div class="datos_usuario" i>
                 <p>XEOVANI JUAREZ PEÑALOZA</p>
 			    <label for="">Duración de sesion: <input type="text" value="" id="Tiempo-sesion1"></label>
             </div>
@@ -131,55 +131,38 @@
 			        </ul>
 			    </div>
 			    <div class="inf-solicitud">
-			            <h2>Solicitud</h2>
-			            <p>Información Adicional:<br>Indique por favor la solicitud de servicio que desea ingresar y después presione el botón de Aceptar</p>
+			            <h2>Graficos</h2>
+			            <p>Información Adicional:<br>Indique por favor primeramente la fecha del grafico que desea desplegar, acontinuación seleccione el modulo y por ultimo de click al botón.</p>
 			    </div>
-			    <div class="form_solicitud">
-                    <p> > Nueva Solicitud de Servicio</p>
+			    <div class="form_solicitud formGraficos">
+                    <p> > Graficos</p>
 			        <form action="">
-			            <label for="">CLIENTE</label>
-			            <select name="" id="CLIENTE">
-			                <option value="-1" selected>SELECCIONE OPCION</option>
-			                <option value="1">INVERCAP</option>
-			                <option value="2">ISSEMYN</option>
-			                <option value="3">PRINCIPAL</option>
-			            </select>
-			            <label for="">SOLICITANTE</label>
-			            <select name="" id="SOLICITANTE">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">MÓDULO</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">TIPO DE SOLICITUD</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <label for="">SUBCONSULTA</label>
-			            <select name="" id="">
-			                <option value="">SELECCIONE OPCION</option>
-			                <option value=""></option>
-			                <option value=""></option>
-			                <option value=""></option>
-			            </select>
-			            <input type="submit" class="enviar" value="ACEPTAR">
+                        <div class="">
+                            <label for="">Inicio</label>
+                            <input type="date">
+                            <label for="">Fin</label>
+                            <input type="date">
+                            <label for="">Modulo</label>
+                            <select name="" id="">
+                                <option value="">SELECCIONE OPCION</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <input type="submit" class="enviar" value="Cumplimiento">
+                            <input type="submit" class="enviar" value="Solicitud">
+                            <input type="submit" class="enviar" value="Estatus">
+			            </div>
 			        </form>
 			    </div>
 
 			</div>
 
 	</section>
-    <!---------------------------------------Modal Cerrar sesion---------------------------->
+
+   <!---------------------------------------Modal Cerrar sesion---------------------------->
 
     <div class="modalCerrarSesion animate">
         <div class="cuerpoCerrarSesion">
@@ -199,6 +182,7 @@
             </form>
         </div>
     </div>
+
 
 
 

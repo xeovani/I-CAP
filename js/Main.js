@@ -11,22 +11,25 @@ $(document).ready(function(){
     /*-----------limpiar input---------------*/
 
 
-                        $(".MostRegist >input").focusin(function(){
+         $(".MostRegist >input").focusin(function(){
 
-                            $(this).val(" ");
-                        });
-                        $(".MostRegist >input").focusout(function(){
+                $(this).val(" ");
+            });
+         $(".MostRegist >input").focusout(function(){
 
-                            $(this).val("Iniciar busqueda..");
-                        });
+                $(this).val("Iniciar busqueda..");
+            });
 
-                        $(".navegacion >span > input").focusin(function(){
-                            $(this).val(" ");
-                        });
+         $(".navegacion >span >input:first-child").focusin(function(){
+                $(this).val(" ");
+         });
 
-                        $(".navegacion >span > input").focusout(function(){
-                            $(this).val("Buscar . .");
-                        });
+         $(".navegacion >span >input:first-child").focusout(function(){
+                $(this).val("Buscar . .");
+         });
+
+
+
     /*--------------------modal descarga-------------*/
 
     $(".MostRegist > a").click(function(){
@@ -35,6 +38,16 @@ $(document).ready(function(){
     });
     $(".cabeceraModal span").click(function(){
         $(".modal").css("display","none");
+    });
+
+    /*--------------------modal resumen--------------*/
+    var modalResumen= document.getElementsByClassName("llamadaModal");
+
+    modalResumen.onload=$(".modalResumen").css({ width : '100%'});
+
+    $(".headModResumen span").click(function(){
+        $(".modalResumen").css({"width":"0%"})
+
     });
 
     /*--------------------menu responsivo----------------*/
@@ -55,14 +68,6 @@ $(document).ready(function(){
             return false;
         });
 
-/*
-
-                $(".navegacion nav ~ span >input:first-child").focusin(function(){
-
-                    $(this).val(" ");
-
-                });
-*/
 
 
     /*------------------Efecto parallax-------------------*/
@@ -77,128 +82,47 @@ $(document).ready(function(){
 
 	     });
 
-          /* var submenu = document.querySelectorAll(".navegacion nav > ul > li >.submenu")*/
+    /*------------------Modal cerrar sesion----------------*/
 
-         /*  for(var i=0;i<=submenu.length;i++){
+                $(".btnCerrarSesion").click(function(){
+                        $(".modalCerrarSesion").css({display:"block"});
+                  return false;
+                });
 
-      /* $(".hover").hover(function(){
+                $(".headCerrarSesion span").click(function(){
+                    $(".modalCerrarSesion").css({"display":"none"});
+                });
 
-                       /* $(".navegacion nav ul li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});
-                          $(".over").show(500).css({"display" : "flex", "z-index" : "1"});
-                        },
+                $(".seccionCerrarSesion input:gt(0)").click(function(){
 
-                        function(){
-                         $(".over").hide(500).css({"padding" : "0", "display" : "none",
-                                                                              "position" : " absolute "
-                                                                              });
-
-                       /* $(".navegacion nav ul li .submenu").hide(500).css({"padding" : "0", "position" : " absolute ",
-                                                                           "display" : "none"});
-
-        });
-
-              }   */
+                    $(".modalCerrarSesion").css({"display":"none"});
+                });
 
 
+    /*---------------------------semaforo------------------*/
 
-
-
-
-
-
-
-
-
-            /*-----------------Menu------------------------*/
-//
-//     var menu = document.querySelectorAll(".navegacion nav > ul > li");
-//     var submenu = document.querySelectorAll(".navegacion nav > ul > li >div >div");
-//    console.log("menu: " + menu.length);
-//
-//    console.log("submenu: " + submenu.length);
-//      for(var i=0;i<=6;i++){
-//
-//
-//
-//                menu[i].onmouseover=
-//                    function(){
-//
-//                    $(this).css("background-color" , "rgba(16, 113, 185, 0.6)");/*efecto over--cambia de color*/
-//
-//                    /*   $(".navegacion nav > ul > li:hover .submenu").show(500).css({"display" : "flex", "z-index" : "1"});*/
-//
-//
-//
-//
-//
-//
-//                    }
-//
-//
-//                menu[i].onmouseout=function(){
-//
-//                    $(this).css("background-color" , "#0C426F");
-//
-//
-//
-//                       /*    $(".navegacion > nav > ul > li .submenu").hide().css({"padding"  : "0px",
-//                                                                       "position" : "absolute",
-//                                                                       "display"  : "none"});   */
-//
-//
-//                    }
-//
-//           }
-            /*-----------------------------over de semaforo--------------------------*/
-
-/*             $(".contenedor-tabla table tr").hover(
-                        function(){
-                            $(this).css("background-color","#0C426F");
-                        },
-
-                        function(){
-                            $(this).css("background-color","rgba(16,113,185,0.1)");
-
-
-                        });*/
-
-
-
-
-
+/*
                 var semaforo= document.querySelectorAll(".contenedor-tabla table tr");
 
                     console.log(semaforo);
                     for(var i=1;i<=semaforo.length;i++){
 
-                                        semaforo[i].onmouseover=
-                                            function(){//
+                                        semaforo[i].onmouseover=function(){
                                                 $(this).css({"background":"#0C426F","cursor":"pointer"}).on("click",function(){
-                                                                                        $(this).css("background-color", "yellow");//cambiar la funcion para                                              //  que dirija a donde debe
+                                                                                        $(this).css("background-color", "yellow");
                                                                                         });
 
                                             }
 
-                                        semaforo[i].onmouseout=
-                                            function(){
+                                        semaforo[i].onmouseout=function(){
                                                 $(this).css("background","rgba(16,113,185,0.1)");
                                             }
 
 
                     }
+*/
 
 
-
-
-                       $(".login_user form").validationEngine();
-
-                        var usr=$("#Usuario").val();
-
-                        $("#btn-enviar").click(function(){
-                            var mayusculas= $("#Usuario").val().toUpperCase();
-                            $("#Usuario").val(mayusculas);
-
-                        });
 
 
 
@@ -208,44 +132,153 @@ $(document).ready(function(){
 });
 
 
+                      /*-----------------------------------duracion de sesion--------------*/
 
 
 
-
-                /*-----------------------------------duracion de sesion--------------*/
-
-
-
-                        var segundos = 0;
-                        var minutos = 0;
-                        var horas = 0;
+                        var segundos;
+                        var minutos;
+                        var horas;
                         var t;
                         var tiempo = 0;
+                        var time;
 
                         function contadorTiempo() {
-                            document.getElementById("Tiempo-sesion").value = horas + ":" + minutos + ":" + segundos;
-                            segundos = segundos + 1;
-                            t = setTimeout(function(){ contadorTiempo() }, 1000);
-                            if(segundos==59){
-                                segundos=0;
-                                minutos= minutos + 1;
 
-                                    if(minutos==59)
-                                        {
-                                            minutos=0;
-                                            horas = horas + 1;
-                                        }
+                            var cero="0";
+                            var seg,min,hrs;
+
+                            if(segundos<10){
+                                seg= cero + segundos;
+
+                             }
+                            else{
+                                seg=segundos;
                             }
-                        }
+                            if(minutos<10){
+                                min= cero + minutos;
+                            }
+                            else{
+                                min= minutos;
+                            }
+                            if(horas<10){
+                                hrs= cero + horas;
+                            }
+                            else{
+                                hrs=horas;
+                            }
+                             document.getElementById("Tiempo-sesion1").value = hrs + ":" + min + ":"  + seg;
+                              time=document.getElementById("Tiempo-sesion1").value;
 
+
+
+
+                                segundos = segundos + 1;
+                                setTimeout(function(){ contadorTiempo() }, 1000);
+                                if(segundos==59){
+                                    segundos=0;
+                                    minutos= minutos + 1;
+
+                                        if(minutos==59)
+                                            {
+                                                minutos=0;
+                                                horas = horas + 1;
+                                            }
+
+                                }
+
+
+
+                            }
+
+                    /*-----------funcion iniciar conteo-------------*/
                         function iniciarConteo() {
-                            if (!tiempo) {
-                                tiempo = 1;
-                                contadorTiempo();
-                            }
-                        }
+                            reloj();
 
-                        window.onload=iniciarConteo;
+                            if (!tiempo) {
+                                    tiempo = 1;
+                                    contadorTiempo();
+                                }
+                            SessionClear();
+                            }
+
+
+        window.onload=iniciarConteo;
+
+
+            function reloj(){
+
+                    if (typeof(Storage) !== "undefined") {
+
+                            if(
+                    (!(isNaN(parseInt(sessionStorage.getItem("segundos"))) ) &&
+                    (!(isNaN(parseInt(sessionStorage.getItem("minutos"))))) &&
+
+                    (!(isNaN(parseInt(sessionStorage.getItem("horas")))))
+                        ))
+                            {
+                                segundos = parseInt(sessionStorage.getItem("segundos"));
+                                minutos = parseInt(sessionStorage.getItem("minutos"));
+                                horas = parseInt(sessionStorage.getItem("horas"));
+                                console.log("entro");
+                            }else{
+                                segundos = 0;
+                                minutos = 0;
+                                horas = 0;
+
+
+                            }
+
+
+
+                        } else {
+                            document.getElementById("Tiempo-sesion1").innerHTML= "Sorry";
+                        }
+            }
+
+            function sesion(){
+
+                sessionStorage.setItem("segundos",segundos);
+                sessionStorage.setItem("minutos",minutos);
+                sessionStorage.setItem("horas",horas);
+                console.log(sessionStorage.getItem("segundos"));
+                console.log(sessionStorage.getItem("minutos"));
+                console.log(sessionStorage.getItem("horas"));
+
+                  SessionClear();
+
+
+            }
+
+
+
+
+
+
+                    function SessionClear(){
+
+                         document.getElementById('btn-cerr-session').addEventListener('click', function(){
+                                                                    var segd= sessionStorage.getItem(segundos);
+                                                                    var mint= sessionStorage.getItem(minutos);
+                                                                    var hrs= sessionStorage.getItem(horas);
+                                                                    segundos=0;
+                                                                    minutos=0;
+                                                                    horas=0;
+                                                                    sessionStorage.setItem("segd", segundos);                     sessionStorage.setItem("mint", minutos);
+                                                                    sessionStorage.setItem("hrs", horas);
+
+
+                                                                    });
+
+                    }
+
+
+
+
+
+
+
+
 
 
 

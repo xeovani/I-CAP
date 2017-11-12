@@ -12,7 +12,57 @@
 	<link rel="shorcut icon" href="../imagenes/ike.ico">
 
 </head>
-<body onbeforeunload = "sesion()">
+<body class="llamadaModal" onbeforeunload = "sesion()">
+   <!--------------modalResumen-------->
+    <div class="modalResumen">
+        <div class="cuerpoModResumen">
+            <div class="headModResumen">
+                <h2>Resumen</h2>
+                <span>&times;</span>
+            </div>
+            <p>Regitros: 8</p>
+            <div class="tablaModResumen">
+                <table>
+                    <tr class="titTablaResumen">
+                        <th colspan="2">SOLICITUDES</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Cerrada</a></td>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Consulta/ejecucion de sistemas</a></td>
+                        <td>41</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Respuesta</a></td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Asignada</a></td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Consulta/ejecucion soporte</a></td>
+                        <td>41</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Consulata / ejecucion bd</a></td>
+                        <td>41</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Gestion operativa</a></td>
+                        <td>46</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Concluida/revision usuario</a></td>
+                        <td>36</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+                <!-- header -->
 	<header>
 		<div class="cabecera">
 			<div id="logo_icap">
@@ -117,7 +167,7 @@
 	<section>
 			<div id="cuerpo" class="cuerpo">
                      <div class="tituloBusqueda titulo-sem">
-                             <h2>> Busqueda de Solicitudes</h2>
+                             <h2>> Resumen resumen</h2>
                      </div >
                      <div class="infBusqueda tituloBusqueda">
                          <p>Instrucciones:<br>Para iniciar la busqueda por favor dar click en el boton "Filtrar busqueda".</p>
@@ -125,6 +175,7 @@
                      <div class="cuerpoBusqueda">
                          <div class="BusqSolicitud">
                              <div class="MostRegist">
+
                                  <a href=""><img src="../imagenes/document-search-interface-symbol(4).png" alt=""></a>
                                  <label for="">Filtrar busqueda</label>
                              </div>
@@ -254,6 +305,7 @@
 			</div>
 
 	</section>
+   <!-----------------------------modal filtro de busqueda----------------->
     <div class="modal">
         <div class="cuerpoModal">
                <form action="">
@@ -374,9 +426,10 @@
 
 
 
-
 	<script src="../js/css3-mediaqueries.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../js/Main.js"></script>
+
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 body{
-	background: url("../imagenes/fondo_gratis3.jpg");
+	background: url("../imagenes/fondo_pricipal.jpg");
     background-attachment: fixed;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -8,8 +8,6 @@ body{
 	background-size: cover;
     color: #ffffff;
 	font-family: 'Lato', sans-serif;
-
-
 }
 header{
 	width: 100%;
@@ -58,11 +56,14 @@ header{
        text-align: center;
        padding-top: 14px;
     }
+    .datos_usuario p{
+        box-sizing: border-box;
+       margin-bottom: 10px;
+    }
     .datos_usuario input{
         width: 60px;
         background-color:#F58837;
         border: none;
-/*        color: #ffffff;*/
         font-weight: 700;
         text-align: center;
     }
@@ -99,11 +100,6 @@ header{
 	right: 20%;
 	max-width: 62%;
 	height: 100vh;
-/*    background-image: url(../imagenes/bg-body.jpg);*/
-/*
-	background-color: #000000;
-	background-color: rgba(0, 0, 0, 0.9);
-*/
     background-image: url(../imagenes/fondoIV.png);
 
 
@@ -138,6 +134,8 @@ header{
         box-sizing: border-box;
         padding: 10px 10px;
         background-color: rgba(16, 113, 185, 1);
+        display: inline-block;
+        position: relative;
 
     }
     .CRUD_user > ul > li:nth-child(2){
@@ -148,8 +146,6 @@ header{
 
     .tooltip{
         position: absolute;
-        top: 10px;
-        padding: 1%;
         opacity: 0;
         border-radius: 2px;
         z-index: 1;
@@ -157,6 +153,7 @@ header{
         font-size: 12px;
         background-color: #1071b9;
         transition: opacity 1s;
+        box-sizing: border-box;
     }
 
     .CRUD_user > ul > li:hover{
@@ -167,25 +164,33 @@ header{
         opacity: 1;
     }
     .CRUD_user > ul > li:last-child > span{
-        top:4px;
-        margin-left: -145px !important;
-
+       top: 6px;
+       right: 50px;
+       width: 120px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 7px;
     }
     .CRUD_user > ul > li:first-child > span{
-        margin-left: -125px;
+       top: 6px;
+       right: 50px;
+       width: 107px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 7px;
     }
     .CRUD_user > ul > li:nth-child(2) > span{
-        margin-left: 45px;
+       top: 6px;
+       left: 50px;
+       width: 120px;
+       height: 30px;
+       padding-top: 8px;
+       padding-left: 10px;
     }
     /*----------cuerpo de semaforo---------------*/
     .semaforo{
     width: 90%;
     margin: auto;
-/*
-    position: relative;
-    top: 30px;
-*/
-
     }
     .busqueda-semaforo{
     height: 100px;
@@ -232,21 +237,14 @@ header{
 
     }
 
+    .contenedor-tabla table tbody tr:hover{
+     background-color: #0C426F;
+    }
     .contenedor-tabla table tr >td{
         border-top: 1px solid #0C426F;
         text-align: center;
         padding: 5px 0px 5px 0px;
     }
-
-/*
-
-    .contenedor-tabla table tr:not(:only-child):hover{
-        background:#0C426F;
-        cursor:pointer;
-    }
-*/
-
-
 
     .titulo-sem{
         height: 60px;
@@ -311,20 +309,12 @@ header{
     }
     .paginacion ul li{
        display: inline;
-/*       text-align: center;*/
-/*       margin: 0 1% 0 0;               */
-
-
-
     }
     .paginacion ul li a{
        padding: 6px 7px 5px 7px;
        color: #ffffff;
        background-color: #0C426F;
        text-decoration: none;
-    }
-    .paginacion ul li a:hover{
-
     }
     .paginacion img{
         position: relative;
@@ -441,7 +431,7 @@ header{
         text-shadow: 0px 4px 6px rgba(16, 113, 185, 9);
 /*        text-shadow: -22px 5px 1px rgba(16, 113, 185, 9);*/
     }
-    .form_solicitud > form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         margin-left: 450px;
         width:30%;
@@ -456,7 +446,7 @@ header{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
     }
-    .form_solicitud form > input:hover{
+    .form_solicitud form > input[type=submit]:hover{
         box-shadow: 0 4px 16px  rgba(16, 113, 185, 1);
         text-shadow: 1px 1px 6px #fff;
         transition: all 0.2s ease;
@@ -564,15 +554,24 @@ header{
     border-right: 1px solid #ffffff;
     box-sizing: border-box;
 }
+.navegacion nav > ul > li:last-child:hover{
+    text-decoration: underline;
+
+}
 .navegacion nav > ul > li > a{
     color: #fff;
     text-decoration: none;
     display: block;
     padding: 21px 20px 20px;
-
+    cursor: default;
 }
-
-
+.navegacion nav > ul > li:first-child > a{
+    padding: 18px 30px 20px;
+    cursor: pointer;
+}
+.navegacion nav > ul > li:last-child > a{
+    cursor: pointer;
+}
 .navegacion nav > ul > li > a > span{
     font-size: 20px;
     position: absolute;
@@ -584,10 +583,6 @@ header{
 .navegacion nav > ul > li:hover span{
     display: block;
 }
-.navegacion nav > ul > li > a:hover{
-    text-decoration-line: underline;
-}
-
 .navegacion ul li input:first-of-type{
     text-indent: 10px;
     background-repeat: no-repeat;
@@ -600,6 +595,7 @@ header{
 .navegacion >span{
     position: relative;
     left: 22.5%;
+
 
 }
 .navegacion >span >input:first-child{
@@ -627,7 +623,6 @@ header{
     padding: 0px;
     position: absolute;
     display: none;
-
 
 }
 
@@ -714,10 +709,24 @@ header{
 /*-------------BusquedaSolicitud------------*/
 
 .BusqSolicitud{
+    height: 100px;
+/*    color: #000000*/
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+    border-top: 1px solid #BEBEBE;
     display: flex;
     display: -webkit-flex;
+/*
     justify-content: space-between;
     -webkit-justify-content: space-between;
+*/
+
 
 }
 
@@ -732,19 +741,6 @@ header{
     margin: auto;
     box-sizing: border-box;
 }
-.BusqSolicitud{
-    height: 100px;
-    color: #000000
-    background: rgba(226,226,226,1);
-    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
-    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
-    border-top: 1px solid #BEBEBE;
-}
 
 .MostRegist >a{
     box-sizing: border-box;
@@ -754,17 +750,18 @@ header{
     padding: 5px 8px;
     border-radius: 3px;
     box-shadow: -2px 5px 9px #0b3b64;
+
 }
 .MostRegist >a:hover{
     background-color: rgb(16, 113, 185);
     box-shadow: -2px 5px 9px rgb(16, 113, 185);
 }
-.MostRegist >a+label{
+.MostRegist > a + label{
     position: relative;
     bottom: 10px;
 }
 .tituloBusqueda + div > p{
-    margin-top: 15px !important;
+    margin-top: 15px;
 }
 .MostRegist >input{
     text-indent: 5px;
@@ -786,12 +783,37 @@ header{
     margin: 15px ;
     color: rgb(16, 113, 185);
 }
+.infBusqueda{
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
+    top: 0px;
+    padding: 10px;
+    border-bottom: none;
+    color: black;
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(22%, rgba(219,219,219,1)), color-stop(54%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 22%, rgba(209,209,209,1) 54%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+
+}
+  .MostRegist > a > img{
+        width: 100%;
+        height: auto;
+    }
+
 /*----------modal busqueda----------*/
 .modal{
     display: none;
     z-index: 2000;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
     width: 0%;
     height: 0%;
     position: fixed;
@@ -803,7 +825,7 @@ header{
 .cuerpoModal{
     position: relative;
     width: 50%;
-    height: 250px;
+    height: 300px;
     box-sizing: border-box;
     margin: auto;
     border: 1px solid #ffffff;
@@ -812,7 +834,7 @@ header{
     animation-name: animacionTop;
     animation-duration: 0.4s;
     background-color: #0b3b64;
-    box-shadow: 4px 5px 19px;
+    box-shadow: 1px -1px 11px #c1bfea;
 }
 .cabeceraModal{
     display: flex;
@@ -822,10 +844,27 @@ header{
     border-bottom: 1px solid #ffffff;
     box-sizing: border-box;
     padding: 12px;
-/*    background-color: #0b3b64;*/
+
+}
+.cabeceraModal >div:nth-child(3){
+    width: 25px;
+    height: 28px;
 }
 .cabeceraModal span{
+    display: inline-block;
+    box-sizing: border-box;
+    width:inherit;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.cabeceraModal span:hover{
+    background-color: #ffffff;
+    border-radius: 1px;
     cursor: pointer;
+    color: #0b3b64;
 }
 .cabeceraModal >div{
     margin: auto;
@@ -833,7 +872,7 @@ header{
 .descargaFiltro{
     display: flex;
     -webkit- display: flex;
-    justify-content: center;
+/*    justify-content: center;*/
     box-sizing: border-box;
     padding: 9px 5px;
 }
@@ -860,7 +899,85 @@ header{
     justify-content: center;
     box-sizing: border-box;
 }
+.footerModal >div{
+    margin: auto;
+}
+.cuerpoModal form input[type=submit]{
+    border: none;
+    color: #ffffff;
+    width: 180px;
+    height: 26px;
+    font-size: 16px;
+    margin: 20px 20px;
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 39%, rgba(32,124,229,1) 63%, rgba(32,124,229,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(39%, rgba(73,155,234,1)), color-stop(63%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
+    background: -webkit-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 39%, rgba(32,124,229,1) 63%, rgba(32,124,229,1) 100%);
+    background: -o-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 39%, rgba(32,124,229,1) 63%, rgba(32,124,229,1) 100%);
+    background: -ms-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 39%, rgba(32,124,229,1) 63%, rgba(32,124,229,1) 100%);
+}
+.cuerpoModal form input[type=submit]:hover{
+    cursor: pointer;
+    background: rgba(32,124,229,1);
+    background: -moz-linear-gradient(top, rgba(32,124,229,1) 0%, rgba(32,124,229,1) 38%, rgba(73,155,234,1) 65%, rgba(73,155,234,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,124,229,1)), color-stop(38%, rgba(32,124,229,1)), color-stop(65%, rgba(73,155,234,1)), color-stop(100%, rgba(73,155,234,1)));
+    background: -webkit-linear-gradient(top, rgba(32,124,229,1) 0%, rgba(32,124,229,1) 38%, rgba(73,155,234,1) 65%, rgba(73,155,234,1) 100%);
+    background: -o-linear-gradient(top, rgba(32,124,229,1) 0%, rgba(32,124,229,1) 38%, rgba(73,155,234,1) 65%, rgba(73,155,234,1) 100%);
+    background: -ms-linear-gradient(top, rgba(32,124,229,1) 0%, rgba(32,124,229,1) 38%, rgba(73,155,234,1) 65%, rgba(73,155,234,1) 100%);
+}
+.filtroFolio{
+    display: flex;
+    -webkit-display:flex;
+    justify-content: center;
+}
+.filtroFolio input{
+    box-sizing: border-box;
+    margin: 20px ;
+}
+.filtroFolio label{
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.formularioModal + div{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+}
+/*
+.formularioModal + div input[type=submit]{
+    margin: 5%;
+}
+*/
+/*------modalBitacora---------*/
 
+
+.modalBitacora{
+    height: 200px;
+}
+
+/*------modalReportes---------*/
+.cuerpMdalReport{
+    height: 400px;
+}
+.filtroReportes{
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+.filtroReportes >div{
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+}
+.filtroReportes >div label{
+   display: block;
+}
+.filtroReportes >div label{
+    box-sizing: border-box;
+    padding: 5px 0px;
+    width:120px;
+}
 
 /*----agregando animacion a modal---*/
 @keyframes animacionTop{
@@ -873,39 +990,237 @@ header{
     to {top:0; opacity:1}
 
 }
+/*--------------graficos-------------*/
+.formGraficos form div{
+     box-sizing: border-box;
+     margin: 40px auto;
+}
+.formGraficos form div input[type=submit]{
+    border: none;
+    color: #ffffff;
+    width: 180px;
+    height: 26px;
+    font-size: 16px;
+    background: #1e5799;
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 97%, #7db9e8 100%);
+    background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%);
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 97%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );}
+
+.formGraficos form div input[type=submit]:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+    text-shadow: 1px 1px 6px #fff;
+    transition: all 0.2s ease;
+}
+
+/*------------------modalResumen------------------*/
+.modalResumen{
+    width: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.cuerpoModResumen{
+    position: relative;
+    width: 25%;
+    height: 470px;
+    margin-top: 220px;
+    background: #00426D;
+
+}
+.cuerpoModResumen .headModResumen{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+}
+.cuerpoModResumen .headModResumen *{
+    margin: 10px;
+    box-sizing: border-box;
+
+}
+.tablaModResumen table th{
+    box-sizing: border-box;
+    padding-top: 12px;
+    width: 100%;
+}
+.headModResumen >span{
+    cursor: pointer;
+}
+.cuerpoModResumen >p{
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+.tablaModResumen{
+    height:83.9%;
+}
+.tablaModResumen table{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: scroll;
+}
+.tablaModResumen table tr >td{
+    box-sizing: border-box;
+    padding: 15px 5px 0px 7px;
+}
+.tablaModResumen table tr td a{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.tablaModResumen table tr td a:hover{
+    text-decoration: underline;
+}
+.tablaModResumen table tr:not(.titTablaResumen):hover{
+    background: #0070B5;
+    transition: 0.3s;
+}
+.headModResumen span{
+    box-sizing: border-box;
+    width: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.headModResumen span:hover{
+    background-color: #ffffff;
+    border-radius: 1px;
+    cursor: pointer;
+    color: #0b3b64;
+}
+/*--------------Modal Cerrar sesion--------*/
+.modalCerrarSesion{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.7);
+    z-index: 5000;
+    padding-top: 280px;
+    overflow: auto;
+}
+.cuerpoCerrarSesion{
+    box-sizing: border-box;
+    width: 450px;
+    height: 200px;
+    border:1px solid #ffffff;
+    background: #00426D;
+    margin: auto;
+    box-shadow: 0px 0px 12px #585858;
+}
+.headCerrarSesion{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid  #ffffff;
+}
+.headCerrarSesion *{
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+.headCerrarSesion span{
+    font-size: 28px;
+    font-weight: bold;
+    width: 25px;
+    text-align: center;
+    transition: 1s;
+}
+.headCerrarSesion span:hover{
+    color: #00426D;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.seccionCerrarSesion{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.seccionCerrarSesion > input{
+
+    width: 70px;
+    height: 30px;
+    margin: auto;
+    transition: 1s;
+    border: none;
+}
+.seccionCerrarSesion > input:hover{
+    background: #0070B5;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    color: #ffffff;
 
 
+}
+.imgMdlSesion{
+    box-sizing: border-box;
+    margin-top: 30px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.imgMdlSesion div{
+    box-sizing: border-box;
+    width: 32px;
+    margin: 0px 95px 0px;
+    background-repeat: no-repeat;
+
+}
+.imgMdlSesion div:first-child{
+
+    background-image: url("../imagenes/candado-cerrado-blco32px.png");
+}
+.imgMdlSesion div:nth-child(2){
+    background-image: url("../imagenes/candado-abierto-blco32px.png");
+}
+.animate{
+    -web-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom{
+    from {-webkit-transform: scale(0)}
+    to{-webkit-transform:scale(1)}
+}
+@keyframes animatezoom{
+    from{transform:scale(0)}
+    to{transform: scale(1)}
+}
 /*Diseño reponsivo */
 
 			         /*-------------------------------menor de 480px-------------------------------*/
 
 @media(max-width: 480px) {
     body{
-/*
-    background: url("../imagenes/fondo_gratis3.jpg") center center;
-    background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-    height: 100vh;
-    width: 100%;
-*/
-    background: url("../imagenes/fondo_mobil.jpg") !important;
-    background-attachment: fixed !important;
-	background-repeat: no-repeat !important;
+    background: url("../imagenes/fondo_pricipal_480px.jpg") center center fixed !important;
+    background-repeat: no-repeat !important;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	-o-background-size: cover !important;
 	background-size: cover !important;
+
     }
+
 	html{
 		font-size: 62.5%;
 /*        height: 100vh;*/
         width: 100%;
 	}
 	.cabecera{
-		max-height: 65px;
+		max-height: 75px;
         display: -webkit-flex;
         -webkit-justify-content: space-between;
         justify-content:space-between;
@@ -921,7 +1236,7 @@ header{
        box-sizing: border-box;
        width: 20%;
        height: 35px;
-       margin: 10px 2%;
+       margin: 20px 2%;
 
 	}
 	#logo_icap img{
@@ -929,7 +1244,8 @@ header{
 
 	}
 	#logo_procesar{
-		margin: 10px 2% 0px 0px;
+        box-sizing: border-box;
+		margin: 17px 2% 0px 0px;
         height: 40px;
         max-width: 20%;
 	}
@@ -944,15 +1260,19 @@ header{
         padding-top: 2%;
 
     }
+    .datos_usuario p{
+        margin-bottom: 0px;
+    }
     .datos_usuario input{
-        width: 30%;
+        display: block;
         background-color:#F58837;
+        box-sizing: border-box;
         border: none;
         font-size: 10px;
+        width: 50px;
+        margin: 5px auto;
     }
-    .datos_usuario br{
-        display: none;
-    }
+
 
     .input_login{
         margin-top: 9px;
@@ -1033,12 +1353,10 @@ header{
     .navegacion nav{
         width: 80%;
         position: absolute;
-        top: 167px;
-/*        overflow: scroll;*/
+        top: 177px;
         height: calc(80%);
         z-index: 1000;
         left: -100%;
-/*        display: none;*/
     }
     .navegacion nav>ul>li{
         display: block;
@@ -1074,8 +1392,7 @@ header{
    .navegacion >span >input:first-child + input{
        box-sizing: border-box;
        width: 8%;
-/*        padding: 8px 9% 8.5px 10%;*/
-        background-position: 50% 5px;
+       background-position: 50% 5px;
 
     }
 
@@ -1153,12 +1470,44 @@ header{
     .CRUD_user > ul > li{
         box-sizing: border-box;
         padding: 10px 10px;
-/*        margin: 10px;*/
+        display: inline-block;
 
     }
     .CRUD_user > ul > li:nth-child(2){
         margin-right: auto;
     }
+
+/*--------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
+    }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 51px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+
+
+/*--------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -1181,9 +1530,10 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         width:90%;
+        margin-left: 0px;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
         background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
@@ -1198,9 +1548,7 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
     /*---------semaforo----------*/
     .titulo-sem{
         height: 40px !important;
@@ -1231,15 +1579,8 @@ header{
         background-color: #0C426F;
         transition: opacity 1s;
     }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        left: 180px;
-    }
 
-
-
-
-        /*--------------piquito del tooltip-----------*/
+    /*--------------piquito del tooltip-----------*/
     .CRUD_user > ul > li:last-child > span::after{
         content: "";
         position: absolute;
@@ -1271,28 +1612,145 @@ header{
     /*-----paginacion--------*/
 
     .paginacion > ul > li > a >img{
-     box-sizing: border-box;
-     position: relative;
-     top: 3px;
+         box-sizing: border-box;
+         position: relative;
+         top: 3px;
+        }
+    /*-------------BusquedaSolicitud------------*/
+    .tituloBusqueda, .intrBusqueda{
+        height: 40px !important;
+    }
+    .tituloBusqueda + div > p{
+        margin-top: 0px !important;
+    }
+    .BusqSolicitud{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        color: #000000;
+    }
+    .MostRegist input[type]{
+       font-size: 122.5%;
+
+    }
+    .MostRegist >a{
+        width: 40px;
+    }
+    /*----modal busqueda---------*/
+    .cuerpoModal{
+        width: 75%;
+        height: 350px;
+    }
+    .modal select, input[type]{
+        font-size: 10px
+    }
+    .selectFiltro{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .selectFiltro >div{
+        margin: 7px !important;
     }
 
+    /*-------modal resumen bitacora---*/
+    .modalBitacora{
+        height: 250px;
+    }
+
+    .filtroFolio{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .filtroFolio div{
+        margin: 0px !important;
+    }
+    .filtroFolio div:nth-child(2) > input[type=submit]{
+        width: 120px;
+        height: 20px;
+        font-size: 12px;
+        margin-left: 27%;
+    }
+    /*-----------modal Reportes----------*/
+    .cuerpMdalReport{
+        width: 50%;
+        height: 420px;
+    }
+    .filtroReportes >div{
+        width: 75%;
+        height: 80px;
+        margin: 0px auto !important;
+    }
+    .filtroReportes{
+        height: 155px;
+    }
+    .cuerpMdalReport input[type=submit]{
+        width: 120px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        margin: 20px 20% !important;
+    }
+    /*--------------graficos-------------*/
+
+    .formGraficos form div{
+         box-sizing: border-box;
+         margin: 10px auto;
+        width: 200px;
+
+    }
+    .formGraficos form div input[type=submit]{
+        border: none;
+        color: #ffffff;
+        width: 180px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .formGraficos form div input[type=submit]:hover{
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+        text-shadow: 1px 1px 6px #fff;
+        transition: all 0.2s ease;
+    }
+    .formGraficos form div label{
+        box-sizing: border-box;
+        display: block;
+        font-size: 12px;
+        padding: 2px;
+    }
+    .formGraficos form div select{
+        font-size: 12px;
+        width: 180px !inportant;
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        margin-top: 10px;
+    }
+    .formGraficos form div input[type=date]{
+        width: 180px;
+    }
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+        width: 60%;
+    }
 
 }
 			        /*-------------------------------entre 481 a 768--------------------------------*/
 
 
 @media(min-width: 481px) and (max-width: 767px){
-/*
-       body{
-    background: url("../imagenes/fondo_mobil.jpg") center center fixed;
-    background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    body{
+    background: url("../imagenes/fondo_pricipal_768px.jpg") center center fixed !important;
+    background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
 
     }
-*/
     body{
 		font-size: 93%;
 	}
@@ -1332,8 +1790,8 @@ header{
        background-color: rgb(16,113,185);
 
     }
-    .datos_usuario br{
-        display: none;
+    .datos_usuario p{
+        margin-bottom: 0px;
     }
     .datos_usuario input{
         width: 55px;
@@ -1376,7 +1834,7 @@ header{
         text-align: justify;
 
     }
-    .cuerpo .inf-solicitud,.form_solicitu{
+    .cuerpo .inf-solicitud,.form_solicitud{
        background-color:#E5E5E5;
        color: black;
     }
@@ -1416,8 +1874,8 @@ header{
 
     .navegacion nav{
         width: 45%;
-        position: fixed;
-        top: 182px;
+        position: absolute !important;
+        top: 182px !important;
         height: calc(100%);
         z-index: 1000;
         left: -100%;
@@ -1523,9 +1981,37 @@ header{
 /*        margin: 10px;*/
 
     }
-    .CRUD_user > ul > li:nth-child(2){
-        margin-right: auto;
+/*-----------------------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
     }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 50px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+
+
+/*-----------------------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -1548,8 +2034,9 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
+        margin-left: 0px;
         width:90%;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
@@ -1565,9 +2052,7 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
      /*----------tooltip----------*/
     .tooltip{
         position: absolute;
@@ -1580,10 +2065,6 @@ header{
         font-size: 12px;
         background-color: #0C426F;
         transition: opacity 1s;
-    }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        margin-left: 45px;
     }
 
 
@@ -1626,8 +2107,128 @@ header{
         height: 50px !important;
     }
 
+        /*-------------BusquedaSolicitud------------*/
 
+    .tituloBusqueda + div > p{
+        margin-top: 0px !important;
+    }
+    .BusqSolicitud{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        color: #000000;
+    }
+    .MostRegist input[type]{
+       font-size: 12px;
 
+    }
+    .MostRegist >a{
+        width: 40px;
+    }
+        .cuerpoModal{
+        width: 75%;
+        height: 350px;
+    }
+
+    /*-------modal busqueda----------*/
+
+    .modal select, input[type]{
+        font-size: 10px
+    }
+    .selectFiltro{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .selectFiltro >div{
+        margin: 7px !important;
+    }
+        .modalBitacora{
+        height: 250px;
+    }
+
+    /*--------modal Resumen bitacora----*/
+    .filtroFolio{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .filtroFolio div{
+        margin: 0px !important;
+    }
+    .filtroFolio div:nth-child(2) > input[type=submit]{
+        width: 120px;
+        height: 20px;
+        font-size: 12px;
+        margin-left: 20%;
+    }
+    /*-----------modal Reportes----------*/
+    .cuerpMdalReport{
+        width: 50%;
+        height: 420px;
+        font-size: 12px !important;
+    }
+    .filtroReportes >div{
+        width: 75%;
+        height: 80px;
+        margin: 0px auto !important;
+        box-sizing: border-box;
+    }
+    .filtroReportes{
+        height: 165px;
+    }
+    .cuerpMdalReport input[type=submit]{
+        width: 120px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        margin: 20px 20% !important;
+    }
+        /*--------------graficos-------------*/
+
+    .formGraficos form div{
+        box-sizing: border-box;
+        margin: 10px auto;
+        width: 80%;
+
+    }
+    .formGraficos form div input[type=submit]{
+        border: none;
+        color: #ffffff;
+        width: 90%;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .formGraficos form div input[type=submit]:hover{
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(16, 113, 185, 1);
+        text-shadow: 1px 1px 6px #fff;
+        transition: all 0.2s ease;
+    }
+    .formGraficos form div label{
+        box-sizing: border-box;
+        display: block;
+        font-size: 12px;
+        padding: 2px 0px;
+
+    }
+    .formGraficos form div select{
+        font-size: 12px;
+
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        margin-top: 10px;
+    }
+    .formGraficos form div input[type=date]{
+        width: 90%;
+    }
+        /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+       width: 50%;
+    }
 
 
 }
@@ -1635,7 +2236,17 @@ header{
 
 @media (min-width: 768px) and (max-width:1024px){
     body{
-		font-size: 93%;
+    background: url("../imagenes/fondo_pricipal_1024px.jpg") center center fixed !important;
+    background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+
+    }
+
+    body{
+        font-size: 93%
 	}
 	.cabecera{
 		max-height: 80px;
@@ -1677,7 +2288,7 @@ header{
         display: none;
     }
     .datos_usuario input{
-        width: 55px;
+        width: 65px;
         background-color:#F58837;
         border: none;
     }
@@ -1757,7 +2368,7 @@ header{
 
     .navegacion nav{
         width: 40%;
-        position: fixed;
+        position: absolute !important;
         top: 182px;
         height: calc(100%);
         z-index: 1000;
@@ -1838,11 +2449,9 @@ header{
         background-position: 50% 5px;
 
     }
-    .navegacion >span input{
 
-    }
 /*-------------CRUD-USER----------*/
-        .CRUD_user{
+   .CRUD_user{
     box-sizing: border-box;
     position: relative;
     border: none;
@@ -1864,12 +2473,38 @@ header{
     .CRUD_user > ul > li{
         box-sizing: border-box;
         padding: 10px 10px;
-/*        margin: 10px;*/
+
 
     }
-    .CRUD_user > ul > li:nth-child(2){
-        margin-right: auto;
+/*----------------------------*/
+    .CRUD_user > ul > li:last-child > span{
+       font-size: 10px;
+       top: 10px;
+       right: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 7px;
     }
+    .CRUD_user > ul > li:first-child > span{
+       font-size: 10px;
+       top: 13px;
+       left: 51px;
+       width: 94px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+    .CRUD_user > ul > li:nth-child(2) > span{
+       font-size: 10px;
+       top: 12px;
+       left: 50px;
+       width: 100px;
+       height: 20px;
+       padding-top: 5px;
+       padding-left: 9px;
+    }
+/*-------------------------------*/
     .CRUD_user > ul > li:hover{
         background-color: rgb(12,66,111);
     }
@@ -1892,9 +2527,10 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud > form > input[type=submit]{
         margin-top: 20px;
         width:90%;
+        margin-left: 0px;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
         background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
@@ -1909,9 +2545,7 @@ header{
         font-size: 16px;
         color: rgb(16,113,185);
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
-    }
+
      /*----------tooltip----------*/
     .tooltip{
         position: absolute;
@@ -1924,10 +2558,6 @@ header{
         font-size: 12px;
         background-color: #0C426F;
         transition: opacity 1s;
-    }
-    .CRUD_user > ul > li:first-child > span{
-        box-sizing: border-box;
-        margin-left: 45px;
     }
 
 
@@ -1965,7 +2595,87 @@ header{
        overflow-x: scroll;
     }
 
+    /*----------busquedaSolicitud------*/
+    .BusqSolicitud{
+        color: #000000;
+    }
+    .BusqSolicitud >div:nth-child(1){
+        height: 80px;
+        box-sizing: border-box;
+    }
+    .BusqSolicitud >div:nth-child(1) >label{
+        position: relative;
+        top: 10px;
+        display: block;
+    }
+    /*----------modal--------------------*/
+    .cuerpoModal{
+        width: 70%;
+        height: 350px;
+    }
 
+    .selectFiltro{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .selectFiltro >div{
+        margin: 7px !important;
+    }
+    .formularioModal + div input[type=submit]{
+        margin: 2% !important;
+    }
+    .modalBitacora{
+        height: 200px;
+    }
+        /*-----------modal Reportes----------*/
+    .cuerpMdalReport{
+        width: 50%;
+        height: 400px;
+        font-size: 12px !important;
+    }
+    .filtroReportes >div{
+        width: 40%;
+        height: 85px;
+        box-sizing: border-box;
+    }
+    .filtroReportes {
+        height: 165px;
+        display: flex;
+        -webkit-display: flex;
+        justify-content: center;
+        -webkit-justify-content:center;
+
+    }
+    .cuerpMdalReport input[type=submit]{
+        width: 120px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        margin: 20px 20% !important;
+    }
+
+    /*---------------graficos-----------*/
+
+    .formGraficos form div select{
+        width: 180px !important;
+    }
+    .formGraficos >form >div >label:nth-child(5){
+        box-sizing: border-box;
+        padding-top: 14px;
+        display: block;
+    }
+    .formGraficos form div{
+        width: 100%;
+    }
+    .formGraficos form div:nth-child(2) input[type=submit]{
+        width:30%;
+    }
+
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+       width: 35%;
+    }
 
 
 }
@@ -1973,6 +2683,16 @@ header{
 			/*-----------------------------------entre 1025 y 1280--------------------------------------*/
 
 @media (min-width: 1025px) and (max-width: 1280px){
+    body{
+    background: url("../imagenes/fondo_pricipal_1024px.jpg") center center fixed !important;
+    background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+
+    }
+
 	.cabecera{
 		max-height: 100px;
         display: -webkit-flex;
@@ -2002,14 +2722,17 @@ header{
 
     .datos_usuario{
        box-sizing: border-box;
-/*       max-width: 300px;*/
        margin: auto;
        padding: 1% 10%;
-/*       background-color: rgb(12,66,111);*/
-    background-color: rgb(16,113,185);
+       background-color: rgb(16,113,185);
+    }
+    .datos_usuario p{
+        font-size: 14px;
+        box-sizing: border-box;
+
     }
     .datos_usuario input{
-        width: 55px;
+        width: 65px;
         background-color:#F58837;
         border: none;
     }
@@ -2048,7 +2771,7 @@ header{
     .navegacion nav > ul > li{
         display: inline-block;
         border: none !important;
-/*        margin-left: -4px;    */
+
     }
     .navegacion nav > ul > li > a{
         color: #fff;
@@ -2093,7 +2816,7 @@ header{
         color: black;
     }
     .cuerpo .form_solicitud select{
-    width: 50%;
+        width: 50%;
     }
 
      .login_user > input{
@@ -2105,12 +2828,12 @@ header{
     }
         /*-------------CRUD-USER----------*/
     .CRUD_user{
-    box-sizing: border-box;
-    position: relative;
-    border: none;
-    width: 90%;
-    margin: auto;
-    top: 0px;
+        box-sizing: border-box;
+        position: relative;
+        border: none;
+        width: 90%;
+        margin: auto;
+        top: 0px;
 
     }
     .CRUD_user ul{
@@ -2153,8 +2876,9 @@ header{
         box-sizing: border-box;
         height: 430px;
     }
-    .form_solicitud form > input{
+    .form_solicitud form > input[type=submit]{
         margin-top: 20px;
+        margin-left: 0px;
         width:50%;
         border: 1px solid rgb(12,66,111);
         background: #1e5799; /* Old browsers */
@@ -2164,8 +2888,73 @@ header{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
     }
-    .form_solicitud > form > input{
-        margin-left: 0px;
+
+        /*----------modal--------------------*/
+    .cuerpoModal{
+        height: 350px;
+    }
+
+    .selectFiltro{
+        display: flex;
+        -webkit-display:flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .selectFiltro >div{
+        margin: 7px !important;
+    }
+    .formularioModal + div input[type=submit]{
+        margin: 2% !important;
+    }
+    /*-----------modal Resumen bitacora------*/
+    .modalBitacora{
+        height: 200px;
+    }
+    /*------------modal Reportes--------------*/
+
+    .cuerpMdalReport{
+        width: 50%;
+        height: 400px;
+        font-size: 12px !important;
+    }
+    .filtroReportes {
+        height: 165px;
+        display: flex;
+        -webkit-display: flex;
+        justify-content: center;
+        -webkit-justify-content:center;
+
+    }
+    .filtroReportes >div{
+        width: 40%;
+        height: 85px;
+        box-sizing: border-box;
+    }
+    .cuerpMdalReport input[type=submit]{
+        width: 120px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        margin: 20px 20% !important;
+    }
+
+    /*------------graficos-------*/
+    .formGraficos form{
+        display: flex;
+        width: 90%;
+    }
+    .formGraficos form div{
+        width: 100%;
+    }
+    .formGraficos form div{
+        width: 100%;
+        text-align: center;
+    }
+    .formGraficos form div select{
+        width: 180px !important;
+    }
+    /*------------modalResumenResumen--------*/
+    .cuerpoModResumen{
+        width: 30%;
     }
 
 
@@ -2185,6 +2974,29 @@ header{
     .cuerpo{
         height: 100%;
     }
+    /*---------modal reporte------*/
+     .cuerpMdalReport{
+         width: 50%;
+    }
+
+    .filtroReportes{
+        display: flex;
+        -webkit-display:flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+    .filtroReportes > div{
+        width: 200px;
+    }
+    /*------------graficos-----------*/
+    .formGraficos form{
+        display: flex;
+        width: 90%;
+    }
+    .formGraficos form div{
+        height: 80px;
+    }
+
 
 
 }
